@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=11335&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="docker教程，python教程，AI教程，云服务器技术。">
+<title>Pages</title>
+
+<link rel='canonical' href='http://localhost:11335/page/'>
+
+<link rel="stylesheet" href="/scss/style.min.a4e832e6e6f000697976a19d93e453ea8a9d202f516481a19170947c839a9d97.css"><meta property='og:title' content="Pages">
+<meta property='og:description' content="docker教程，python教程，AI教程，云服务器技术。">
+<meta property='og:url' content='http://localhost:11335/page/'>
+<meta property='og:site_name' content='Aliya の 笔记'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-12-14T20:16:05&#43;08:00 '/>
+<meta name="twitter:title" content="Pages">
+<meta name="twitter:description" content="docker教程，python教程，AI教程，云服务器技术。"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:11335/page/index.xml">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css" /> 
+
+<link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
+
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+#scroll-to-top, #search-button {
+    display: none;  
+    position: fixed;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #555;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+#scroll-to-top:hover, #search-button:hover {
+    color: #333;
+}
+#scroll-to-top {
+    bottom: 20px;
+}
+#search-button {
+    bottom: 80px;
+}
+.cat-icon {
+    width: 40px;
+    height: 40px;
+}
+
+ 
+@media (min-width: 768px) {
+    #search-button {
+        display: none !important;
+    }
+}
+
+ 
+@media (max-width: 767px) {
+    #search-button {
+        display: block;
+    }
+}
+</style>
+<button onclick="topFunction()" id="scroll-to-top" title="回到顶部">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-chevrons-up-filled" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 2c-.218 0 -.432 .002 -.642 .005l-.616 .017l-.299 .013l-.579 .034l-.553 .046c-4.785 .464 -6.732 2.411 -7.196 7.196l-.046 .553l-.034 .579c-.005 .098 -.01 .198 -.013 .299l-.017 .616l-.004 .318l-.001 .324c0 .218 .002 .432 .005 .642l.017 .616l.013 .299l.034 .579l.046 .553c.464 4.785 2.411 6.732 7.196 7.196l.553 .046l.579 .034c.098 .005 .198 .01 .299 .013l.616 .017l.642 .005l.642 -.005l.616 -.017l.299 -.013l.579 -.034l.553 -.046c4.785 -.464 6.732 -2.411 7.196 -7.196l.046 -.553l.034 -.579c.005 -.098 .01 -.198 .013 -.299l.017 -.616l.005 -.642l-.005 -.642l-.017 -.616l-.013 -.299l-.034 -.579l-.046 -.553c-.464 -4.785 -2.411 -6.732 -7.196 -7.196l-.553 -.046l-.579 -.034a28.058 28.058 0 0 0 -.299 -.013l-.616 -.017l-.318 -.004l-.324 -.001zm-.707 9.293a1 1 0 0 1 1.32 -.083l.094 .083l3 3a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.32 .083l-.094 -.083a1 1 0 0 1 -.083 -1.32l.083 -.094l3 -3zm0 -4a1 1 0 0 1 1.32 -.083l.094 .083l3 3a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.32 .083l-.094 -.083a1 1 0 0 1 -.083 -1.32l.083 -.094l3 -3z" fill="currentColor" stroke-width="0" />
+</svg>
+</button>
+<button onclick="openSearch()" id="search-button" title="搜索">
+<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="18" cy="18" r="16" />
+    </clipPath>
+  </defs>
+  <rect width="36" height="36" fill="#597e8d" clip-path="url(#circleClip)" />
+  <text x="18" y="22" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">搜</text>
+</svg>
+</button>
+<script>
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scroll-to-top").style.display = "block";
+        document.getElementById("search-button").style.display = "block";
+    } else {
+        document.getElementById("scroll-to-top").style.display = "none";
+        document.getElementById("search-button").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function openSearch() {
+    window.location.href = "/search/";
+}
+</script>
+
+<script src="/js/tiaozhuan.js"></script>
+
+
+<link rel="preconnect" href="//sdk.51.la">
+
+
+
+
+
+<script>
+  window.FPConfig = {
+    delay: 0,    
+    ignoreKeywords: [],  
+    maxRPS: 3,    
+    hoverDelay: 50    
+  };
+</script>
+<script defer src="/js/flying-pages.min.js"></script>
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/me_hu3464d9e09649d8ce6c8bc392b5119e70_6045_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar" referrerpolicy="no-referrer">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🧐</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Aliya の 笔记</a></h1>
+            <h2 class="site-description">人生随笔. ✍🏻</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href=''
+                        target="_blank"
+                        
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/1143520'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://home.1143520.xyz/'
+                        target="_blank"
+                        title="myHome"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M10 19h-6a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1h6a2 2 0 0 1 2 2a2 2 0 0 1 2 -2h6a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-6a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2z"></path> <path d="M12 5v16"></path> <path d="M7 7h1"></path> <path d="M7 11h1"></path> <path d="M16 7h1"></path> <path d="M16 11h1"></path> <path d="M16 15h1"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-high" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />
+  <path d="M6.343 17.657l-1.414 1.414" />
+  <path d="M6.343 6.343l-1.414 -1.414" />
+  <path d="M17.657 6.343l1.414 -1.414" />
+  <path d="M17.657 17.657l1.414 1.414" />
+  <path d="M4 12h-2" />
+  <path d="M12 4v-2" />
+  <path d="M20 12h2" />
+  <path d="M12 20v2" />
+</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+  <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+  <path d="M19 11h2m-1 -1v2" />
+</svg>
+                        <span>深色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>搜索</label>
+            <input name="keyword" required placeholder="输入关键词..." />
+        
+            <button title="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">归档</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2024">
+                        
+                            <span class="year">2024</span>
+                            <span class="count">4</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">分类</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/hugo/" class="font_size_2">
+                教程
+            </a>
+        
+            <a href="/categories/%E5%88%86%E4%BA%AB/" class="font_size_1">
+                分享
+            </a>
+        
+            <a href="/categories/%E6%95%99%E7%A8%8B/" class="font_size_1">
+                教程
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">标签云</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/%E4%B8%BB%E9%A2%98/" class="font_size_3">
+                主题
+            </a>
+        
+            <a href="/tags/%E6%B5%8B%E8%AF%95/" class="font_size_1">
+                测试
+            </a>
+        
+    </div>
+</section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <header>
+        <h3 class="section-title">
+            
+                章节
+            
+        </h3>
+
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">4 个页面</h3>
+                <h1 class="section-term">Pages</h1>
+                
+            </div>
+        </div>
+    </header>
+    
+    <section class="article-list--compact">
+        
+            <article>
+    <a href="/archives/">
+        <div class="article-details">
+            <h2 class="article-title">归档</h2>
+            <footer class="article-time">
+                <time datetime='2019-05-28T00:00:00Z'>2019-05-28</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/about/">
+        <div class="article-details">
+            <h2 class="article-title">关于</h2>
+            <footer class="article-time">
+                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/links/">
+        <div class="article-details">
+            <h2 class="article-title">伙伴们</h2>
+            <footer class="article-time">
+                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/search/">
+        <div class="article-details">
+            <h2 class="article-title">搜索</h2>
+            <footer class="article-time">
+                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+    </section>
+<footer class="site-footer">
+    <section class="powerby">
+        
+            晚来天欲雪，能饮一杯无 <br/>
+        
+    </section>
+    <section class="copyright">
+        <br/>
+
+        
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+	    
+        
+        共发表了4篇文章 · 
+        总计0.36k字
+        <br>
+
+    本站已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    <script>
+    function updateRunningTime() {
+        const startDate = new Date("2024-12-14".replace(/-/g, "/"));
+        const now = new Date();
+        const elapsedTime = now - startDate;
+
+        const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((elapsedTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+        const result = `${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒 `;
+        document.getElementById('runningdays').innerHTML = result;
+    }
+
+    setInterval(updateRunningTime, 1000);
+    updateRunningTime();  
+    </script>
+    <br>
+        
+    </section>
+        
+        
+        <a target="_blank" href="https://github.com/CaiJimmy/hugo-theme-stack" title="主题开源项目">
+        <img src="/img/github.svg" alt="">
+        </a>
+        
+        <a target="_blank" href="https://gohugo.io/" title="由 HUGO 驱动">
+        <img src="/img/hugo.svg" alt="">
+        </a>
+        
+        <a target="_blank" href="https://cloudflare.com/" title="由 CF 部署静态">
+        <img src="/img/cloudflare.svg" alt="">
+        </a>
+        
+</footer>
+
+<script src="/js/pangu.min.js"></script>
+<script>
+  pangu.spacingPage();
+</script>
+
+
+
+
+            </main>
+        </div>
+        <script 
+                src="/js/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "/css/local.google.fonts.css";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
