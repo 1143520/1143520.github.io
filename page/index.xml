@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Aliya の 笔记</title>
-        <link>http://localhost:11335/page/</link>
+        <link>http://localhost:13524/page/</link>
         <description>Recent content in Pages on Aliya の 笔记</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:11335/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13524/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>http://localhost:11335/archives/</link>
+        <link>http://localhost:13524/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11335/archives/</guid>
+        <guid>http://localhost:13524/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>http://localhost:11335/about/</link>
+        <link>http://localhost:13524/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11335/about/</guid>
+        <guid>http://localhost:13524/about/</guid>
         <description>在content\page\about\index.zh-cn.md 修改
-下面是个人简介博客是个人思想的灯塔，在信息洪流中指引着共鸣。</description>
+下面是个人简介 博客是个人思想的灯塔，在信息洪流中指引着共鸣。</description>
         </item>
         <item>
         <title>伙伴们</title>
-        <link>http://localhost:11335/links/</link>
+        <link>http://localhost:13524/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11335/links/</guid>
+        <guid>http://localhost:13524/links/</guid>
         <description>在\content\page\links\index.md文件中添加友链</description>
         </item>
         <item>
         <title>搜索</title>
-        <link>http://localhost:11335/search/</link>
+        <link>http://localhost:13524/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:11335/search/</guid>
+        <guid>http://localhost:13524/search/</guid>
         <description></description>
         </item>
         

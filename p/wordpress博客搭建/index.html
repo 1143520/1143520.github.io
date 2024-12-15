@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=11335&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="wordpress博客搭建\r1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录\r2、远程拉取，下载解压（用于创建新的网站）\r查看最新版本 https://cn.wordpress.org/download/ 远程下载链接（替换版本号） https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录 现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份） 给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP 3、备份以及迁移\r使用duplicator插件 先在原来的后台工具-导出-wordpress 会得到一个xml文件 然后使用duplicator插件，提示路径问题就给0777权限 保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL 使用duplicator，确保网站根目录为空！！ 上传Installer和备份文件， 访问 https://您的域名/installer.php 教程 https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录 如果提示文件不存在，则使用之前导出的xml导入覆盖 切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=13524&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="wordpress博客搭建 1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录 2、远程拉取，下载解压（用于创建新的网站） 查看最新版本 https://cn.wordpress.org/download/ 远程下载链接（替换版本号） https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录 现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份） 给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP 3、备份以及迁移 使用duplicator插件 先在原来的后台工具-导出-wordpress 会得到一个xml文件 然后使用duplicator插件，提示路径问题就给0777权限 保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL 使用duplicator，确保网站根目录为空！！ 上传Installer和备份文件， 访问 https://您的域名/installer.php 教程 https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录 如果提示文件不存在，则使用之前导出的xml导入覆盖 切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来">
 <title>Wordpress博客搭建</title>
 
-<link rel='canonical' href='http://localhost:11335/p/wordpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+<link rel='canonical' href='http://localhost:13524/p/wordpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
 
-<link rel="stylesheet" href="/scss/style.min.a4e832e6e6f000697976a19d93e453ea8a9d202f516481a19170947c839a9d97.css"><meta property='og:title' content="Wordpress博客搭建">
-<meta property='og:description' content="wordpress博客搭建\r1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录\r2、远程拉取，下载解压（用于创建新的网站）\r查看最新版本 https://cn.wordpress.org/download/ 远程下载链接（替换版本号） https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录 现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份） 给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP 3、备份以及迁移\r使用duplicator插件 先在原来的后台工具-导出-wordpress 会得到一个xml文件 然后使用duplicator插件，提示路径问题就给0777权限 保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL 使用duplicator，确保网站根目录为空！！ 上传Installer和备份文件， 访问 https://您的域名/installer.php 教程 https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录 如果提示文件不存在，则使用之前导出的xml导入覆盖 切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来">
-<meta property='og:url' content='http://localhost:11335/p/wordpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+<link rel="stylesheet" href="/scss/style.min.3f0c9b2372f4301a544fff3c04a2c71bdd5809ab26d3bf322e1ea80997af7e6d.css"><meta property='og:title' content="Wordpress博客搭建">
+<meta property='og:description' content="wordpress博客搭建 1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录 2、远程拉取，下载解压（用于创建新的网站） 查看最新版本 https://cn.wordpress.org/download/ 远程下载链接（替换版本号） https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录 现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份） 给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP 3、备份以及迁移 使用duplicator插件 先在原来的后台工具-导出-wordpress 会得到一个xml文件 然后使用duplicator插件，提示路径问题就给0777权限 保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL 使用duplicator，确保网站根目录为空！！ 上传Installer和备份文件， 访问 https://您的域名/installer.php 教程 https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录 如果提示文件不存在，则使用之前导出的xml导入覆盖 切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来">
+<meta property='og:url' content='http://localhost:13524/p/wordpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
 <meta property='og:site_name' content='Aliya の 笔记'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='测试' /><meta property='article:published_time' content='2024-12-14T15:40:19&#43;08:00'/><meta property='article:modified_time' content='2024-12-14T15:45:51&#43;08:00'/>
 <meta name="twitter:title" content="Wordpress博客搭建">
-<meta name="twitter:description" content="wordpress博客搭建\r1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录\r2、远程拉取，下载解压（用于创建新的网站）\r查看最新版本 https://cn.wordpress.org/download/ 远程下载链接（替换版本号） https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录 现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份） 给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP 3、备份以及迁移\r使用duplicator插件 先在原来的后台工具-导出-wordpress 会得到一个xml文件 然后使用duplicator插件，提示路径问题就给0777权限 保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL 使用duplicator，确保网站根目录为空！！ 上传Installer和备份文件， 访问 https://您的域名/installer.php 教程 https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录 如果提示文件不存在，则使用之前导出的xml导入覆盖 切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来">
+<meta name="twitter:description" content="wordpress博客搭建 1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录 2、远程拉取，下载解压（用于创建新的网站） 查看最新版本 https://cn.wordpress.org/download/ 远程下载链接（替换版本号） https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录 现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份） 给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP 3、备份以及迁移 使用duplicator插件 先在原来的后台工具-导出-wordpress 会得到一个xml文件 然后使用duplicator插件，提示路径问题就给0777权限 保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL 使用duplicator，确保网站根目录为空！！ 上传Installer和备份文件， 访问 https://您的域名/installer.php 教程 https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录 如果提示文件不存在，则使用之前导出的xml导入覆盖 切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来">
     <link rel="shortcut icon" href="/favicon.ico" />
 
   
@@ -170,7 +170,7 @@ function openSearch() {
                     
                     
                         
-                        <img src="/img/me_hu3464d9e09649d8ce6c8bc392b5119e70_6045_300x0_resize_box_3.png" width="300"
+                        <img src="/img/me_hucb6b8c8d92a696c92e428de03251668b_681699_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar" referrerpolicy="no-referrer">
                     
                 
@@ -694,6 +694,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
 
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/tg%E5%90%8C%E6%AD%A5%E6%B6%88%E6%81%AF%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">TG同步消息的留言板</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
      
     
         
@@ -730,8 +752,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
 	    
         
-        共发表了4篇文章 · 
-        总计0.36k字
+	    
+        
+        共发表了5篇文章 · 
+        总计0.37k字
         <br>
 
     本站已稳定运行

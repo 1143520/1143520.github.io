@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=11335&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前提条件\r以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo\rhttps://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git\rhttps://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客\r使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件\r拷贝hugo-magic主题核心文件到根目录 quickstart cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=13524&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前提条件 以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝hugo-magic主题核心文件到根目录 quickstart cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .">
 <title>hugo-magic主题使用教程(一)</title>
 
-<link rel='canonical' href='http://localhost:11335/p/1/'>
+<link rel='canonical' href='http://localhost:13524/p/1/'>
 
-<link rel="stylesheet" href="/scss/style.min.a4e832e6e6f000697976a19d93e453ea8a9d202f516481a19170947c839a9d97.css"><meta property='og:title' content="hugo-magic主题使用教程(一)">
-<meta property='og:description' content="前提条件\r以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo\rhttps://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git\rhttps://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客\r使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件\r拷贝hugo-magic主题核心文件到根目录 quickstart cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .">
-<meta property='og:url' content='http://localhost:11335/p/1/'>
+<link rel="stylesheet" href="/scss/style.min.3f0c9b2372f4301a544fff3c04a2c71bdd5809ab26d3bf322e1ea80997af7e6d.css"><meta property='og:title' content="hugo-magic主题使用教程(一)">
+<meta property='og:description' content="前提条件 以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝hugo-magic主题核心文件到根目录 quickstart cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .">
+<meta property='og:url' content='http://localhost:13524/p/1/'>
 <meta property='og:site_name' content='Aliya の 笔记'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='主题' /><meta property='article:published_time' content='2024-06-15T21:22:11&#43;08:00'/><meta property='article:modified_time' content='2024-12-14T14:46:23&#43;08:00'/>
 <meta name="twitter:title" content="hugo-magic主题使用教程(一)">
-<meta name="twitter:description" content="前提条件\r以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo\rhttps://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git\rhttps://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客\r使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件\r拷贝hugo-magic主题核心文件到根目录 quickstart cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .">
+<meta name="twitter:description" content="前提条件 以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝hugo-magic主题核心文件到根目录 quickstart cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .">
     <link rel="shortcut icon" href="/favicon.ico" />
 
   
@@ -170,7 +170,7 @@ function openSearch() {
                     
                     
                         
-                        <img src="/img/me_hu3464d9e09649d8ce6c8bc392b5119e70_6045_300x0_resize_box_3.png" width="300"
+                        <img src="/img/me_hucb6b8c8d92a696c92e428de03251668b_681699_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar" referrerpolicy="no-referrer">
                     
                 
@@ -722,8 +722,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
 	    
         
-        共发表了4篇文章 · 
-        总计0.36k字
+	    
+        
+        共发表了5篇文章 · 
+        总计0.37k字
         <br>
 
     本站已稳定运行
