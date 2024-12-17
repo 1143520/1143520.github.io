@@ -1,44 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Pages on Aliya の 笔记</title>
-        <link>http://localhost:13524/page/</link>
-        <description>Recent content in Pages on Aliya の 笔记</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13524/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>归档</title>
-        <link>http://localhost:13524/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:13524/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>http://localhost:13524/about/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:13524/about/</guid>
-        <description>在content\page\about\index.zh-cn.md 修改
-下面是个人简介 博客是个人思想的灯塔，在信息洪流中指引着共鸣。</description>
-        </item>
-        <item>
-        <title>伙伴们</title>
-        <link>http://localhost:13524/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:13524/links/</guid>
-        <description>在\content\page\links\index.md文件中添加友链</description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>http://localhost:13524/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:13524/search/</guid>
-        <description></description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Aliya の 笔记</title><link>https://note.1143520.xyz/page/</link><description>Recent content in Pages on Aliya の 笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://note.1143520.xyz/page/index.xml" rel="self" type="application/rss+xml"/><item><title>时光</title><link>https://note.1143520.xyz/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/archives/</guid><description/></item><item><title>伙伴们😉</title><link>https://note.1143520.xyz/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/links/</guid><description/></item><item><title>觅踪</title><link>https://note.1143520.xyz/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/search/</guid><description/></item><item><title>千寻</title><link>https://note.1143520.xyz/qianxun/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/qianxun/</guid><description> 在 content\page\qianxun\index.md 文件中添加卡片
+格式示例:
+links: - title: 网站名称 description: 网站描述 website: 网站链接 image: 图标链接（本地图片放在/static/img/目录下，可以使用emoji）</description></item><item><title>缘起</title><link>https://note.1143520.xyz/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/about/</guid><description>在 content\page\about\index.zh-cn.md 修改
+下面是个人简介🫣 博客是个人思想的灯塔，在信息洪流中指引着共鸣。</description></item></channel></rss>

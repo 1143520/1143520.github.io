@@ -1,37 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>教程 on Aliya の 笔记</title>
-        <link>http://localhost:13524/categories/hugo/</link>
-        <description>Recent content in 教程 on Aliya の 笔记</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language><atom:link href="http://localhost:13524/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>hugo博客写作流程(二)</title>
-        <link>http://localhost:13524/p/2/</link>
-        <pubDate>Sat, 15 Jun 2024 23:09:57 +0800</pubDate>
-        
-        <guid>http://localhost:13524/p/2/</guid>
-        <description>写作工具 推荐两款软件,本人都使用过: typora和obsidian
-typora破解版:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo教程 on Aliya の 笔记</title><link>https://note.1143520.xyz/categories/hugo/</link><description>Recent content in Hugo教程 on Aliya の 笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://note.1143520.xyz/categories/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>默认文章YAML Front Matter</title><link>https://note.1143520.xyz/p/%E9%BB%98%E8%AE%A4%E6%96%87%E7%AB%A0yaml-front-matter/</link><pubDate>Mon, 16 Dec 2024 09:53:39 +0800</pubDate><guid>https://note.1143520.xyz/p/%E9%BB%98%E8%AE%A4%E6%96%87%E7%AB%A0yaml-front-matter/</guid><description>&lt;img src="https://note.1143520.xyz/images/random/05.jpg" alt="Featured image of post 默认文章YAML Front Matter" />小tips……😋</description></item><item><title>校正构建时覆盖文件的最后的修改时间</title><link>https://note.1143520.xyz/p/%E6%A0%A1%E6%AD%A3%E6%9E%84%E5%BB%BA%E6%97%B6%E8%A6%86%E7%9B%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E5%90%8E%E7%9A%84%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/</link><pubDate>Sun, 15 Dec 2024 23:38:14 +0800</pubDate><guid>https://note.1143520.xyz/p/%E6%A0%A1%E6%AD%A3%E6%9E%84%E5%BB%BA%E6%97%B6%E8%A6%86%E7%9B%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E5%90%8E%E7%9A%84%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/</guid><description>&lt;img src="https://note.1143520.xyz/images/random/02.jpg" alt="Featured image of post 校正构建时覆盖文件的最后的修改时间" />在构建之前重新恢复文件在本地系统的修改时间，避免被commit时间覆盖导致显示错误
+GitHub Actions 自动部署 Hugo 博客说明文档 本文档详细说明了 .github/workflows/main.yml 文件的配置和工作原理。这个工作流程用于自动构建和部署 Hugo 博客到 GitHub Pages。
+触发条件 on: push: branches: - main # 更新触发的分支 工作流会在 main 分支收到推送时自动触发。
+运行环境 jobs: build-deploy: runs-on: ubuntu-20.04 使用 Ubuntu 20.04 作为构建环境，这是为了确保构建环境的稳定性。
+构建步骤 1. 设置时区 - name: Set timezone run: | sudo timedatectl set-timezone Asia/Shanghai 将系统时区设置为中国时区（UTC+8），确保生成的时间戳正确。
+2. 检出代码 - name: Check out repository code uses: actions/checkout@v4 with: submodules: recursive # 获取 Hugo 主题 fetch-depth: 0 # 获取完整的 Git 历史 submodules: recursive: 递归克隆所有子模块，确保主题文件完整 fetch-depth: 0: 获取完整的 Git 历史，这对于获取文件的修改时间很重要 3.</description></item><item><title>HUGO搭建使用注意</title><link>https://note.1143520.xyz/p/hugo%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F/</link><pubDate>Sun, 15 Dec 2024 03:56:11 +0800</pubDate><guid>https://note.1143520.xyz/p/hugo%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F/</guid><description>&lt;img src="https://img.meituan.net/video/1254de0c71736e5846e8239eeb395bb11420405.jpg" alt="Featured image of post HUGO搭建使用注意" />1、源代码仓库hugo，静态资源仓库public 2、public不能上传到hugo仓库，否则构建出错 3、token一定要有workflow和repo权限 4、垃圾edge，使用ctrl+F5刷新网页 5、新建文章或者在文章之前插入 yaml front matter
+title: &amp;#34;TG同步消息的留言板&amp;#34; slug: description: keywords: date: 2024-12-14T15:40:19+08:00 lastmod: 2024-12-14T15:40:19+08:00 draft: false toc: true weight: false image: license: comments: summary: categories: [share] tags: [测试] ai: true 6、置顶文章 在 Hugo 中，可以通过在文章的 Front Matter 中添加 weight 参数来实现文章置顶。
+weight 的值越小，文章就会排在越前面。比如说：
+对于想要置顶的文章，在文章开头的 Front Matter 中添加：
+title: &amp;#34;你的文章标题&amp;#34; date: 2024-01-01 weight: 1 *# 添加这一行，数字越小越靠前* 普通文章不需要设置 weight，它们会按照日期自动排序。
+如果有多个置顶文章，可以通过设置不同的 weight 值来控制它们之间的顺序：
+weight: 1 最靠前
+weight: 2 次之
+weight: 3 再次之</description></item><item><title>hugo-magic 主题自定义(三) —— 改</title><link>https://note.1143520.xyz/p/3/</link><pubDate>Sun, 16 Jun 2024 04:43:15 +0800</pubDate><guid>https://note.1143520.xyz/p/3/</guid><description>&lt;img src="https://note.1143520.xyz/img/hugo.png" alt="Featured image of post hugo-magic 主题自定义(三) —— 改" />hugo.yaml 几乎所有自定义都在根目录hugo.yaml文件中去修改
+AI摘要 AI摘要脚本sm.py 在根目录下,不要移动到其他地方,需要安装python,然后运行
+python sm.py 输入slug: slug就是文章的slug字段,在标题的下方,可自定义,不能是中文,前面不要加数字0
+输入summary: 输入摘要,可以在浏览器安装kimi阅读助手插件
+下载python
+https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe 底部图标 页面底部的图标在footer_links.json文件中修改,</description></item><item><title>hugo博客写作流程(二) —— 改</title><link>https://note.1143520.xyz/p/2/</link><pubDate>Sat, 15 Jun 2024 23:09:57 +0800</pubDate><guid>https://note.1143520.xyz/p/2/</guid><description>&lt;img src="https://note.1143520.xyz/img/hugo.png" alt="Featured image of post hugo博客写作流程(二) —— 改" />写作工具 推荐两款软件,本人都使用过: typora 和 obsidian
+typora 破解版:
 https://github.com/woniu336/typora-007
 新建文章 在博客目录找到shell/quickstart.sh双击打开即可
-发布到Github 前提:
-魔法上网 在Github新建一个仓库 找到shell/quickstart.sh双击打开,选择7.SSH 管理工具 按照1到4走一遍流程
-科普一下: hugo是静态博客,需要把public目录下的所有文件发布到github 你可能找不到public目录,工具箱选择第3项:生成静态文件即可 需要把public单独作为一个仓库发布到github,选择菜单8:推送 public 到Github 远程仓库格式,例如:git@github.com:woniu336/fff.git Github Actions 工作流 Github Actions 通俗解释: 按照剧本去执行任务,什么时候干什么事情
-打开git bash 在博客目录运行
-mkdir -p .github/workflows 在workflows目录新建main.yml文件,粘贴以下内容:
-name: Auto Deploy hugo on: push: branches: - main # 更新触发的分支 jobs: build-deploy: # runs-on: ubuntu-latest runs-on: ubuntu-20.04 steps: - name: Check out repository code uses: actions/checkout@v4 with: submodules: recursive # Fetch Hugo themes (true OR recursive) fetch-depth: 0 # Fetch all history for .</description>
-        </item>
-        <item>
-        <title>hugo-magic主题使用教程(一)</title>
-        <link>http://localhost:13524/p/1/</link>
-        <pubDate>Sat, 15 Jun 2024 21:22:11 +0800</pubDate>
-        
-        <guid>http://localhost:13524/p/1/</guid>
-        <description>前提条件 以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令
-hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝hugo-magic主题核心文件到根目录 quickstart
-cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .</description>
-        </item>
-        
-    </channel>
-</rss>
+先设置全局代理端口，再验证 ssh
+发布到 Github 前提:
+魔法上网 在 Github 新建一个仓库 可以取名为 username.github.io
+找到shell/quickstart.sh双击打开,选择7.SSH 管理工具 按照 1 到 4 走一遍流程，之前搞过 github 仓库可以跳过
+科普一下: hugo 是静态博客,需要把public目录下的所有文件发布到 github 你可能找不到public目录,工具箱选择第 3 项:生成静态文件即可 需要把public单独作为一个仓库发布到 github,选择菜单8:推送 public 到Github 远程仓库格式,例如:git@github.com:1143520/1143520.github.io.git（这一步可以多试几次，直到可以显示已连接的仓库名，最后都会上传） 上面的 1143520.github.io 是放置静态文件资源的仓库，还需要一个博客源码仓库，例如:1143520/hugo，可以是 private 仓库，保护源码，这个仓库需要 token，必须有 repo 和 workflow 权限（classic,打勾） Github Actions 工作流 Github Actions 通俗解释: 按照剧本去执行任务,什么时候干什么事情
+打开 git bash 在博客目录运行
+mkdir -p .github/workflows 在 workflows 目录新建 main.yml 文件,粘贴以下内容:</description></item><item><title>hugo-magic主题使用教程(一) —— 改</title><link>https://note.1143520.xyz/p/1/</link><pubDate>Sat, 15 Jun 2024 21:22:11 +0800</pubDate><guid>https://note.1143520.xyz/p/1/</guid><description>&lt;img src="https://note.1143520.xyz/img/hugo.png" alt="Featured image of post hugo-magic主题使用教程(一) —— 改" />前提条件 以下教程以 windows10 为例 操作终端使用 git bash 魔法上网的前提下 下载 hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开 cmd 输入 hugo version 验证是否设置正确 下载安装 Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用 Git bash 终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 后面要使用 shell 脚本,所以需要在系统应用默认处把.sh 文件设置默认 gitbash 打开
+在桌面右键打开 Git bash 运行以下命令
+hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝 hugo-magic 主题核心文件到根目录 quickstart
+cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.</description></item></channel></rss>
