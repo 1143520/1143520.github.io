@@ -18,101 +18,101 @@
 <span>深色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#触发条件>触发条件</a></li><li><a href=#运行环境>运行环境</a></li><li><a href=#构建步骤>构建步骤</a><ol><li><a href=#1-设置时区>1. 设置时区</a></li><li><a href=#2-检出代码>2. 检出代码</a></li><li><a href=#3-恢复文件时间戳>3. 恢复文件时间戳</a></li><li><a href=#4-设置-hugo-环境>4. 设置 Hugo 环境</a></li><li><a href=#5-缓存资源>5. 缓存资源</a></li><li><a href=#6-构建站点>6. 构建站点</a></li><li><a href=#7-部署到-github-pages>7. 部署到 GitHub Pages</a></li></ol></li><li><a href=#注意事项>注意事项</a></li><li><a href=#故障排除>故障排除</a></li><li><a href=#源码>源码</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/%E6%A0%A1%E6%AD%A3%E6%9E%84%E5%BB%BA%E6%97%B6%E8%A6%86%E7%9B%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E5%90%8E%E7%9A%84%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/><img src=/images/random/02.jpg loading=lazy alt="Featured image of post 校正构建时覆盖文件的最后的修改时间"></a></div><div class=article-details><header class=article-category><a href=/categories/hugo/ style=background-color:#2a9d8f;color:#fff>Hugo教程</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E6%A0%A1%E6%AD%A3%E6%9E%84%E5%BB%BA%E6%97%B6%E8%A6%86%E7%9B%96%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E5%90%8E%E7%9A%84%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4/>校正构建时覆盖文件的最后的修改时间</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2024-12-15</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>阅读时长: 3 分钟</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4L18.5 9.5a2.828 2.828.0 10-4-4L4 16v4"/><path d="M13.5 6.5l4 4"/></svg>
-<time class=article-time--reading>字数: 444字</time></div></footer></div></header>   <div class=post-ai><div class=ai-title><i class="fa fa-envira" style=font-size:24px></i><div class=ai-title-text>文章摘要</div></div><div id=ai-explanation class=ai-explanation></div><div class="ai-explanation ai-explanation-content">摘要小助理今天溜号啦……😜</div></div><script src=/js/index.umd.js></script><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".ai-explanation-content").textContent;new TypeIt("#ai-explanation",{strings:e,speed:10,lifeLike:!0,waitUntilVisible:!0}).go()})</script><section class=article-content><div class="notice notice-info"><div class=notice-title><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"  fill="#705943"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v1e2h12c7 0 12 5 12 12v24z"/></svg></div><p>在构建之前重新恢复文件在本地系统的修改时间，避免被commit时间覆盖导致显示错误</p></div><h1 id=github-actions-自动部署-hugo-博客说明文档>GitHub Actions 自动部署 Hugo 博客说明文档</h1><p>本文档详细说明了 <code>.github/workflows/main.yml</code> 文件的配置和工作原理。这个工作流程用于自动构建和部署 Hugo 博客到 GitHub Pages。</p><h2 id=触发条件>触发条件</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>on</span>:
-</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>branches</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>main</span> <span style=color:#75715e># 更新触发的分支</span>
-</span></span></code></pre></div><p>工作流会在 <code>main</code> 分支收到推送时自动触发。</p><h2 id=运行环境>运行环境</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>jobs</span>:
-</span></span><span style=display:flex><span>  <span style=color:#f92672>build-deploy</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-20.04</span>
-</span></span></code></pre></div><p>使用 Ubuntu 20.04 作为构建环境，这是为了确保构建环境的稳定性。</p><h2 id=构建步骤>构建步骤</h2><h3 id=1-设置时区>1. 设置时区</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Set timezone</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>run</span>: |<span style=color:#e6db74>
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>    sudo timedatectl set-timezone Asia/Shanghai</span>    
-</span></span></code></pre></div><p>将系统时区设置为中国时区（UTC+8），确保生成的时间戳正确。</p><h3 id=2-检出代码>2. 检出代码</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Check out repository code</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v4</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>with</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>submodules</span>: <span style=color:#ae81ff>recursive</span> <span style=color:#75715e># 获取 Hugo 主题</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>fetch-depth</span>: <span style=color:#ae81ff>0</span> <span style=color:#75715e># 获取完整的 Git 历史</span>
-</span></span></code></pre></div><ul><li><code>submodules: recursive</code>: 递归克隆所有子模块，确保主题文件完整</li><li><code>fetch-depth: 0</code>: 获取完整的 Git 历史，这对于获取文件的修改时间很重要</li></ul><h3 id=3-恢复文件时间戳>3. 恢复文件时间戳</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Restore file timestamps</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>run</span>: |<span style=color:#e6db74>
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>    git ls-files -z | while read -d &#39;&#39; file; do
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>      timestamp=$(git log -1 --format=&#34;%at&#34; -- &#34;$file&#34;)
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>      touch -d @$timestamp &#34;$file&#34;
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>    done</span>    
-</span></span></code></pre></div><p>这个步骤很关键，它解决了 Hugo 获取文件修改时间的问题：</p><ol><li><code>git ls-files -z</code>: 列出所有被 Git 追踪的文件（使用 null 字符分隔）</li><li><code>git log -1 --format="%at"</code>: 获取每个文件最后一次提交的 Unix 时间戳</li><li><code>touch -d @timestamp</code>: 将文件的修改时间设置为该时间戳</li></ol><h3 id=4-设置-hugo-环境>4. 设置 Hugo 环境</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup hugo</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v3.0.0</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>with</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#34;0.127.0&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>extended</span>: <span style=color:#66d9ef>true</span>
-</span></span></code></pre></div><p>安装指定版本的 Hugo Extended 版本。Extended 版本支持 SCSS/SASS 处理。</p><h3 id=5-缓存资源>5. 缓存资源</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Cache resources</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/cache@v3</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>with</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>path</span>: <span style=color:#ae81ff>resources</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>key</span>: <span style=color:#ae81ff>${{ runner.os }}-hugocache-${{ hashFiles(&#39;content/**/*&#39;) }}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>restore-keys</span>: <span style=color:#ae81ff>${{ runner.os }}-hugocache-</span>
-</span></span></code></pre></div><p>缓存 Hugo 的资源文件以加快构建速度：</p><ul><li>缓存路径为 <code>resources</code> 目录</li><li>缓存键基于操作系统和内容文件的哈希值</li><li>当内容变化时会自动创建新的缓存</li></ul><h3 id=6-构建站点>6. 构建站点</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build Hugo static files</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo --gc --minify</span>
-</span></span></code></pre></div><p>使用 Hugo 构建静态文件：</p><ul><li><code>--gc</code>: 构建后运行垃圾收集</li><li><code>--minify</code>: 最小化 HTML、CSS、JS 等文件</li></ul><h3 id=7-部署到-github-pages>7. 部署到 GitHub Pages</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy to Github Pages</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v3</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>with</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>personal_token</span>: <span style=color:#ae81ff>${{ secrets.PERSONAL_TOKEN }}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>external_repository</span>: <span style=color:#ae81ff>1143520</span><span style=color:#ae81ff>/1143520.github.io</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./public</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>publish_branch</span>: <span style=color:#ae81ff>main</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>commit_message</span>: <span style=color:#ae81ff>${{ github.event.head_commit.message }}</span>
-</span></span></code></pre></div><p>将构建好的文件部署到 GitHub Pages：</p><ul><li><code>personal_token</code>: 使用个人访问令牌进行认证</li><li><code>external_repository</code>: 指定部署的目标仓库</li><li><code>publish_dir</code>: 指定要发布的目录（Hugo 的输出目录）</li><li><code>publish_branch</code>: 指定发布到哪个分支</li><li><code>commit_message</code>: 使用触发构建的提交信息作为部署提交信息</li></ul><h2 id=注意事项>注意事项</h2><ol><li>需要在 GitHub 仓库的 Secrets 中设置 <code>PERSONAL_TOKEN</code></li><li>确保目标仓库存在且有正确的访问权限</li><li>时区设置确保了生成的时间戳正确</li><li>文件时间戳的恢复确保了 Hugo 可以获取正确的文件修改时间</li></ol><h2 id=故障排除>故障排除</h2><p>如果部署失败，请检查：</p><ol><li>Personal Token 是否有效且具有正确的权限</li><li>外部仓库是否存在且配置正确</li><li>Hugo 版本是否兼容</li><li>主题子模块是否正确克隆</li></ol><h2 id=源码>源码</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>name: Auto Deploy hugo
-</span></span><span style=display:flex><span>on:
-</span></span><span style=display:flex><span>  push:
-</span></span><span style=display:flex><span>    branches:
-</span></span><span style=display:flex><span>      - main # 更新触发的分支
-</span></span><span style=display:flex><span>jobs:
-</span></span><span style=display:flex><span>  build-deploy:
-</span></span><span style=display:flex><span>    #  runs-on: ubuntu-latest
-</span></span><span style=display:flex><span>    runs-on: ubuntu-20.04
-</span></span><span style=display:flex><span>    steps:
-</span></span><span style=display:flex><span>      - name: Set timezone
-</span></span><span style=display:flex><span>        run: |
-</span></span><span style=display:flex><span>          sudo timedatectl set-timezone Asia/Shanghai
-</span></span><span style=display:flex><span>      
-</span></span><span style=display:flex><span>      - name: Check out repository code
-</span></span><span style=display:flex><span>        uses: actions/checkout@v4
-</span></span><span style=display:flex><span>        with:
-</span></span><span style=display:flex><span>          submodules: recursive # Fetch Hugo themes (true OR recursive)
-</span></span><span style=display:flex><span>          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      - name: Restore file timestamps
-</span></span><span style=display:flex><span>        run: |
-</span></span><span style=display:flex><span>          git ls-files -z | while read -d &#39;&#39; file; do
-</span></span><span style=display:flex><span>            timestamp=$(git log -1 --format=&#34;%at&#34; -- &#34;$file&#34;)
-</span></span><span style=display:flex><span>            touch -d @$timestamp &#34;$file&#34;
-</span></span><span style=display:flex><span>          done
-</span></span><span style=display:flex><span>          
-</span></span><span style=display:flex><span>      - name: Setup hugo
-</span></span><span style=display:flex><span>        uses: peaceiris/actions-hugo@v3.0.0
-</span></span><span style=display:flex><span>        with:
-</span></span><span style=display:flex><span>          #  hugo-version: &#34;latest&#34; # 可以修改为你使用的 Hugo 版本
-</span></span><span style=display:flex><span>          hugo-version: &#34;0.127.0&#34;
-</span></span><span style=display:flex><span>          extended: true # 设置是否需要 extended 版本
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      - name: Cache resources # 缓存 resource 文件加快生成速度
-</span></span><span style=display:flex><span>        uses: actions/cache@v3
-</span></span><span style=display:flex><span>        with:
-</span></span><span style=display:flex><span>          path: resources
-</span></span><span style=display:flex><span>          # 检查照片文件变化
-</span></span><span style=display:flex><span>          key: ${{ runner.os }}-hugocache-${{ hashFiles(&#39;content/**/*&#39;) }}
-</span></span><span style=display:flex><span>          restore-keys: ${{ runner.os }}-hugocache-
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      - name: Build Hugo static files # 部署静态资源
-</span></span><span style=display:flex><span>        run: hugo --gc --minify
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      - name: Deploy to Github Pages # 部署到Github Pages页面
-</span></span><span style=display:flex><span>        uses: peaceiris/actions-gh-pages@v3
-</span></span><span style=display:flex><span>        with:
-</span></span><span style=display:flex><span>          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-</span></span><span style=display:flex><span>          external_repository: 1143520/1143520.github.io
-</span></span><span style=display:flex><span>          publish_dir: ./public # hugo 生成到 public 作为跟目录
-</span></span><span style=display:flex><span>          publish_branch: main # Github Pages 所在分支
-</span></span><span style=display:flex><span>          commit_message: ${{ github.event.head_commit.message }}
+<time class=article-time--reading>字数: 444字</time></div></footer></div></header>   <div class=post-ai><div class=ai-title><i class="fa fa-envira" style=font-size:24px></i><div class=ai-title-text>文章摘要</div></div><div id=ai-explanation class=ai-explanation></div><div class="ai-explanation ai-explanation-content">摘要小助理今天溜号啦……😜</div></div><script src=/js/index.umd.js></script><script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".ai-explanation-content").textContent;new TypeIt("#ai-explanation",{strings:e,speed:10,lifeLike:!0,waitUntilVisible:!0}).go()})</script><section class=article-content><div class="notice notice-info"><div class=notice-title><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512"  fill="#705943"><path d="M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v1e2h12c7 0 12 5 12 12v24z"/></svg></div><p>在构建之前重新恢复文件在本地系统的修改时间，避免被commit时间覆盖导致显示错误</p></div><h1 id=github-actions-自动部署-hugo-博客说明文档>GitHub Actions 自动部署 Hugo 博客说明文档</h1><p>本文档详细说明了 <code>.github/workflows/main.yml</code> 文件的配置和工作原理。这个工作流程用于自动构建和部署 Hugo 博客到 GitHub Pages。</p><h2 id=触发条件>触发条件</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>on</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>push</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>branches</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>main</span><span class=w> </span><span class=c># 更新触发的分支</span><span class=w>
+</span></span></span></code></pre></div><p>工作流会在 <code>main</code> 分支收到推送时自动触发。</p><h2 id=运行环境>运行环境</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>jobs</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>build-deploy</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-20.04</span><span class=w>
+</span></span></span></code></pre></div><p>使用 Ubuntu 20.04 作为构建环境，这是为了确保构建环境的稳定性。</p><h2 id=构建步骤>构建步骤</h2><h3 id=1-设置时区>1. 设置时区</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Set timezone</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>    sudo timedatectl set-timezone Asia/Shanghai</span><span class=w>    
+</span></span></span></code></pre></div><p>将系统时区设置为中国时区（UTC+8），确保生成的时间戳正确。</p><h3 id=2-检出代码>2. 检出代码</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Check out repository code</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v4</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>submodules</span><span class=p>:</span><span class=w> </span><span class=l>recursive</span><span class=w> </span><span class=c># 获取 Hugo 主题</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>fetch-depth</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w> </span><span class=c># 获取完整的 Git 历史</span><span class=w>
+</span></span></span></code></pre></div><ul><li><code>submodules: recursive</code>: 递归克隆所有子模块，确保主题文件完整</li><li><code>fetch-depth: 0</code>: 获取完整的 Git 历史，这对于获取文件的修改时间很重要</li></ul><h3 id=3-恢复文件时间戳>3. 恢复文件时间戳</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Restore file timestamps</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>|</span><span class=sd>
+</span></span></span><span class=line><span class=cl><span class=sd>    git ls-files -z | while read -d &#39;&#39; file; do
+</span></span></span><span class=line><span class=cl><span class=sd>      timestamp=$(git log -1 --format=&#34;%at&#34; -- &#34;$file&#34;)
+</span></span></span><span class=line><span class=cl><span class=sd>      touch -d @$timestamp &#34;$file&#34;
+</span></span></span><span class=line><span class=cl><span class=sd>    done</span><span class=w>    
+</span></span></span></code></pre></div><p>这个步骤很关键，它解决了 Hugo 获取文件修改时间的问题：</p><ol><li><code>git ls-files -z</code>: 列出所有被 Git 追踪的文件（使用 null 字符分隔）</li><li><code>git log -1 --format="%at"</code>: 获取每个文件最后一次提交的 Unix 时间戳</li><li><code>touch -d @timestamp</code>: 将文件的修改时间设置为该时间戳</li></ol><h3 id=4-设置-hugo-环境>4. 设置 Hugo 环境</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Setup hugo</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>peaceiris/actions-hugo@v3.0.0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>hugo-version</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;0.127.0&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>extended</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span></code></pre></div><p>安装指定版本的 Hugo Extended 版本。Extended 版本支持 SCSS/SASS 处理。</p><h3 id=5-缓存资源>5. 缓存资源</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Cache resources</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/cache@v3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>path</span><span class=p>:</span><span class=w> </span><span class=l>resources</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>key</span><span class=p>:</span><span class=w> </span><span class=l>${{ runner.os }}-hugocache-${{ hashFiles(&#39;content/**/*&#39;) }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>restore-keys</span><span class=p>:</span><span class=w> </span><span class=l>${{ runner.os }}-hugocache-</span><span class=w>
+</span></span></span></code></pre></div><p>缓存 Hugo 的资源文件以加快构建速度：</p><ul><li>缓存路径为 <code>resources</code> 目录</li><li>缓存键基于操作系统和内容文件的哈希值</li><li>当内容变化时会自动创建新的缓存</li></ul><h3 id=6-构建站点>6. 构建站点</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Build Hugo static files</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=l>hugo --gc --minify</span><span class=w>
+</span></span></span></code></pre></div><p>使用 Hugo 构建静态文件：</p><ul><li><code>--gc</code>: 构建后运行垃圾收集</li><li><code>--minify</code>: 最小化 HTML、CSS、JS 等文件</li></ul><h3 id=7-部署到-github-pages>7. 部署到 GitHub Pages</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Deploy to Github Pages</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>peaceiris/actions-gh-pages@v3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>personal_token</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.PERSONAL_TOKEN }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>external_repository</span><span class=p>:</span><span class=w> </span><span class=m>1143520</span><span class=l>/1143520.github.io</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>publish_dir</span><span class=p>:</span><span class=w> </span><span class=l>./public</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>publish_branch</span><span class=p>:</span><span class=w> </span><span class=l>main</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>commit_message</span><span class=p>:</span><span class=w> </span><span class=l>${{ github.event.head_commit.message }}</span><span class=w>
+</span></span></span></code></pre></div><p>将构建好的文件部署到 GitHub Pages：</p><ul><li><code>personal_token</code>: 使用个人访问令牌进行认证</li><li><code>external_repository</code>: 指定部署的目标仓库</li><li><code>publish_dir</code>: 指定要发布的目录（Hugo 的输出目录）</li><li><code>publish_branch</code>: 指定发布到哪个分支</li><li><code>commit_message</code>: 使用触发构建的提交信息作为部署提交信息</li></ul><h2 id=注意事项>注意事项</h2><ol><li>需要在 GitHub 仓库的 Secrets 中设置 <code>PERSONAL_TOKEN</code></li><li>确保目标仓库存在且有正确的访问权限</li><li>时区设置确保了生成的时间戳正确</li><li>文件时间戳的恢复确保了 Hugo 可以获取正确的文件修改时间</li></ol><h2 id=故障排除>故障排除</h2><p>如果部署失败，请检查：</p><ol><li>Personal Token 是否有效且具有正确的权限</li><li>外部仓库是否存在且配置正确</li><li>Hugo 版本是否兼容</li><li>主题子模块是否正确克隆</li></ol><h2 id=源码>源码</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>name: Auto Deploy hugo
+</span></span><span class=line><span class=cl>on:
+</span></span><span class=line><span class=cl>  push:
+</span></span><span class=line><span class=cl>    branches:
+</span></span><span class=line><span class=cl>      - main # 更新触发的分支
+</span></span><span class=line><span class=cl>jobs:
+</span></span><span class=line><span class=cl>  build-deploy:
+</span></span><span class=line><span class=cl>    #  runs-on: ubuntu-latest
+</span></span><span class=line><span class=cl>    runs-on: ubuntu-20.04
+</span></span><span class=line><span class=cl>    steps:
+</span></span><span class=line><span class=cl>      - name: Set timezone
+</span></span><span class=line><span class=cl>        run: |
+</span></span><span class=line><span class=cl>          sudo timedatectl set-timezone Asia/Shanghai
+</span></span><span class=line><span class=cl>      
+</span></span><span class=line><span class=cl>      - name: Check out repository code
+</span></span><span class=line><span class=cl>        uses: actions/checkout@v4
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          submodules: recursive # Fetch Hugo themes (true OR recursive)
+</span></span><span class=line><span class=cl>          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Restore file timestamps
+</span></span><span class=line><span class=cl>        run: |
+</span></span><span class=line><span class=cl>          git ls-files -z | while read -d &#39;&#39; file; do
+</span></span><span class=line><span class=cl>            timestamp=$(git log -1 --format=&#34;%at&#34; -- &#34;$file&#34;)
+</span></span><span class=line><span class=cl>            touch -d @$timestamp &#34;$file&#34;
+</span></span><span class=line><span class=cl>          done
+</span></span><span class=line><span class=cl>          
+</span></span><span class=line><span class=cl>      - name: Setup hugo
+</span></span><span class=line><span class=cl>        uses: peaceiris/actions-hugo@v3.0.0
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          #  hugo-version: &#34;latest&#34; # 可以修改为你使用的 Hugo 版本
+</span></span><span class=line><span class=cl>          hugo-version: &#34;0.127.0&#34;
+</span></span><span class=line><span class=cl>          extended: true # 设置是否需要 extended 版本
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Cache resources # 缓存 resource 文件加快生成速度
+</span></span><span class=line><span class=cl>        uses: actions/cache@v3
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          path: resources
+</span></span><span class=line><span class=cl>          # 检查照片文件变化
+</span></span><span class=line><span class=cl>          key: ${{ runner.os }}-hugocache-${{ hashFiles(&#39;content/**/*&#39;) }}
+</span></span><span class=line><span class=cl>          restore-keys: ${{ runner.os }}-hugocache-
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Build Hugo static files # 部署静态资源
+</span></span><span class=line><span class=cl>        run: hugo --gc --minify
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Deploy to Github Pages # 部署到Github Pages页面
+</span></span><span class=line><span class=cl>        uses: peaceiris/actions-gh-pages@v3
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+</span></span><span class=line><span class=cl>          external_repository: 1143520/1143520.github.io
+</span></span><span class=line><span class=cl>          publish_dir: ./public # hugo 生成到 public 作为跟目录
+</span></span><span class=line><span class=cl>          publish_branch: main # Github Pages 所在分支
+</span></span><span class=line><span class=cl>          commit_message: ${{ github.event.head_commit.message }}
 </span></span></code></pre></div></section><footer class=article-footer><section class=article-tags><a href=/tags/%E6%B3%A8%E6%84%8F/>注意</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>CC BY-NC-SA 4.0 创意的非商业派对入场券</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <span>最后更新于 2024-12-16 11:31</span></section></footer><link rel=stylesheet href=/css/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=/js/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=/js/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/%E9%BB%98%E8%AE%A4%E6%96%87%E7%AB%A0yaml-front-matter/><div class=article-image><img src=/images/random/05.jpg loading=lazy data-key data-hash=/images/random/05.jpg referrerpolicy=no-referrer></div><div class=article-details><h2 class=article-title>默认文章YAML Front Matter</h2></div></a></article><article class=has-image><a href=/p/hugo%E6%90%AD%E5%BB%BA%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F/><div class=article-image><img src=https://img.meituan.net/video/1254de0c71736e5846e8239eeb395bb11420405.jpg loading=lazy data-key data-hash=https://img.meituan.net/video/1254de0c71736e5846e8239eeb395bb11420405.jpg referrerpolicy=no-referrer></div><div class=article-details><h2 class=article-title>HUGO搭建使用注意</h2></div></a></article><article class=has-image><a href=/p/3/><div class=article-image><img src=/img/hugo.png loading=lazy data-key=3 data-hash=/img/hugo.png referrerpolicy=no-referrer></div><div class=article-details><h2 class=article-title>hugo-magic 主题自定义(三) —— 改</h2></div></a></article><article class=has-image><a href=/p/2/><div class=article-image><img src=/img/hugo.png loading=lazy data-key=2 data-hash=/img/hugo.png referrerpolicy=no-referrer></div><div class=article-details><h2 class=article-title>hugo博客写作流程(二) —— 改</h2></div></a></article><article class=has-image><a href=/p/1/><div class=article-image><img src=/img/hugo.png loading=lazy data-key=1 data-hash=/img/hugo.png referrerpolicy=no-referrer></div><div class=article-details><h2 class=article-title>hugo-magic主题使用教程(一) —— 改</h2></div></a></article></div></div></aside><footer class=site-footer><section class=powerby>晚来天欲雪，能饮一杯无<br></section><section class=copyright><br>共发表了10篇文章 ·
