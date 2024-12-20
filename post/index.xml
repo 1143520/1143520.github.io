@@ -11,7 +11,27 @@ title: &amp;#34;你的文章标题&amp;#34; date: 2024-01-01 weight: 1 *# 添加
 如果有多个置顶文章，可以通过设置不同的 weight 值来控制它们之间的顺序：
 weight: 1 最靠前
 weight: 2 次之
-weight: 3 再次之</description></item><item><title>hugo-magic 主题自定义(三) —— 改</title><link>https://note.1143520.xyz/p/3/</link><pubDate>Sun, 16 Jun 2024 04:43:15 +0800</pubDate><guid>https://note.1143520.xyz/p/3/</guid><description>&lt;img src="https://note.1143520.xyz/img/hugo.png" alt="Featured image of post hugo-magic 主题自定义(三) —— 改" />hugo.yaml 几乎所有自定义都在根目录hugo.yaml文件中去修改
+weight: 3 再次之</description></item><item><title>TG同步消息的留言板</title><link>https://note.1143520.xyz/p/tg%E5%90%8C%E6%AD%A5%E6%B6%88%E6%81%AF%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF/</link><pubDate>Sat, 14 Dec 2024 15:40:19 +0800</pubDate><guid>https://note.1143520.xyz/p/tg%E5%90%8C%E6%AD%A5%E6%B6%88%E6%81%AF%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF/</guid><description>&lt;img src="https://note.1143520.xyz/images/random/11.jpg" alt="Featured image of post TG同步消息的留言板" />TG同步消息的留言板 前言 脱胎于项目1143520/dropbox，也可以看教程🍹 BAOER の BLOG 🍍，还是使用cloudflare的pages搭建，现在称呼一句TG图床也不为过。
+演示地址：Drop中转站
+项目地址：1143520/tg-box 因为是改的，本来想可以在CF-KV和TG之间随意切换的，太乱了，不丢人显眼了
+可以联系我，上面的演示地址。
+配置截图 @BotFather创建机器人，记下 token，把机器人拉到你的群组。再把@raw_data_bot拉进你的群组查看群组的chat id 使用方法 上传图片或者视频，点击复制，获取一个可以在浏览器直接预览的链接，叫图床还是视频床呢？存储在TG群聊，也不知道期限是多久，多大储存空间，反正最大20M。
+有啥好事直接留言板联系！Drop中转站</description></item><item><title>Wordpress博客搭建</title><link>https://note.1143520.xyz/p/wordpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link><pubDate>Sat, 14 Dec 2024 15:40:19 +0800</pubDate><guid>https://note.1143520.xyz/p/wordpress%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid><description>&lt;img src="https://note.1143520.xyz/images/random/05.jpg" alt="Featured image of post Wordpress博客搭建" />wordpress博客搭建 1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录 2、远程拉取，下载解压（用于创建新的网站） 查看最新版本
+https://cn.wordpress.org/download/ 远程下载链接（替换版本号）
+https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录
+现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份）
+给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP
+3、备份以及迁移 使用duplicator插件
+先在原来的后台工具-导出-wordpress 会得到一个xml文件
+然后使用duplicator插件，提示路径问题就给0777权限
+保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL
+使用duplicator，确保网站根目录为空！！
+上传Installer和备份文件，
+访问
+https://您的域名/installer.php 教程
+https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录
+如果提示文件不存在，则使用之前导出的xml导入覆盖
+切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来</description></item><item><title>hugo-magic 主题自定义(三) —— 改</title><link>https://note.1143520.xyz/p/3/</link><pubDate>Sun, 16 Jun 2024 04:43:15 +0800</pubDate><guid>https://note.1143520.xyz/p/3/</guid><description>&lt;img src="https://note.1143520.xyz/img/hugo.png" alt="Featured image of post hugo-magic 主题自定义(三) —— 改" />hugo.yaml 几乎所有自定义都在根目录hugo.yaml文件中去修改
 AI摘要 AI摘要脚本sm.py 在根目录下,不要移动到其他地方,需要安装python,然后运行
 python sm.py 输入slug: slug就是文章的slug字段,在标题的下方,可自定义,不能是中文,前面不要加数字0
 输入summary: 输入摘要,可以在浏览器安装kimi阅读助手插件
@@ -29,24 +49,4 @@ https://github.com/woniu336/typora-007
 mkdir -p .github/workflows 在 workflows 目录新建 main.yml 文件,粘贴以下内容:</description></item><item><title>hugo-magic主题使用教程(一) —— 改</title><link>https://note.1143520.xyz/p/1/</link><pubDate>Sat, 15 Jun 2024 21:22:11 +0800</pubDate><guid>https://note.1143520.xyz/p/1/</guid><description>&lt;img src="https://note.1143520.xyz/img/hugo.png" alt="Featured image of post hugo-magic主题使用教程(一) —— 改" />前提条件 以下教程以 windows10 为例 操作终端使用 git bash 魔法上网的前提下 下载 hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开 cmd 输入 hugo version 验证是否设置正确 下载安装 Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用 Git bash 终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 后面要使用 shell 脚本,所以需要在系统应用默认处把.sh 文件设置默认 gitbash 打开
 在桌面右键打开 Git bash 运行以下命令
 hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝 hugo-magic 主题核心文件到根目录 quickstart
-cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.</description></item><item><title/><link>https://note.1143520.xyz/p/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/p/</guid><description>TG同步消息的留言板 前言 脱胎于项目1143520/dropbox，也可以看教程🍹 BAOER の BLOG 🍍，还是使用cloudflare的pages搭建，现在称呼一句TG图床也不为过。
-演示地址：Drop中转站
-项目地址：1143520/tg-box 因为是改的，本来想可以在CF-KV和TG之间随意切换的，太乱了，不丢人显眼了
-可以联系我，上面的演示地址。
-配置截图 @BotFather创建机器人，记下 token，把机器人拉到你的群组。再把@raw_data_bot拉进你的群组查看群组的chat id 使用方法 上传图片或者视频，点击复制，获取一个可以在浏览器直接预览的链接，叫图床还是视频床呢？存储在TG群聊，也不知道期限是多久，多大储存空间，反正最大20M。
-有啥好事直接留言板联系！Drop中转站</description></item><item><title/><link>https://note.1143520.xyz/p/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://note.1143520.xyz/p/</guid><description>wordpress博客搭建 1、在1panel创建php环境，选择wordpress模板，创建网站，进入网站根目录 2、远程拉取，下载解压（用于创建新的网站） 查看最新版本
-https://cn.wordpress.org/download/ 远程下载链接（替换版本号）
-https://cn.wordpress.org/wordpress-6.7.1-zh_CN.zip 解压后全选移动到根目录
-现在就可以访问网址了，配置数据库也可以在本地编辑wp-config.php（新建，将WordPress安装目录下的wp-config-sample.php文件复制到wp-config.php文件中，并将wp-config-sample.php文件作为备份）
-给与index目录包括子文件夹0777权限（省事），否则后面很多操作需要配置FTP
-3、备份以及迁移 使用duplicator插件
-先在原来的后台工具-导出-wordpress 会得到一个xml文件
-然后使用duplicator插件，提示路径问题就给0777权限
-保持一样的域名，只修改DNS解析ip，和上面一样，搞好运行环境和数据库和SSL
-使用duplicator，确保网站根目录为空！！
-上传Installer和备份文件，
-访问
-https://您的域名/installer.php 教程
-https://www.wpdaxue.com/wordpress-migration-plugin-duplicator.html 如果有redis缓存还要修改wp-config.php，之后才能点击进行登录
-如果提示文件不存在，则使用之前导出的xml导入覆盖
-切记，不要批量启用插件！安装之后是自动启用的，把不需要的禁用就行，一个个来，出问题了直接删除网站重来</description></item></channel></rss>
+cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.</description></item></channel></rss>
