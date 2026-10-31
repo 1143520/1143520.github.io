@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="455.04pt" height="123.84pt" viewBox="0 0 455.04 123.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-31T13:50:46.904321</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 123.84 
+L 455.04 123.84 
+L 455.04 -0 
+L 0 -0 
+z
+" style="fill: #0d1117"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 22.32 84.96 
+L 151.92 84.96 
+L 151.92 31.2 
+L 22.32 31.2 
+z
+" clip-path="url(#p23659ca0c0)" style="fill: #1c2430; stroke: #c9d1d9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 162.72 84.96 
+L 292.32 84.96 
+L 292.32 31.2 
+L 162.72 31.2 
+z
+" clip-path="url(#p23659ca0c0)" style="fill: #1c2430; stroke: #c9d1d9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 303.12 84.96 
+L 432.72 84.96 
+L 432.72 31.2 
+L 303.12 31.2 
+z
+" clip-path="url(#p23659ca0c0)" style="fill: #2f6f9f; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(66.12 56.603437)">Ctrl+Shift+1</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(73.12 64.587812)">自由框选</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(206.52 56.603437)">Ctrl+Shift+2</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(213.52 64.587812)">整块屏幕</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(346.92 56.603437)">Ctrl+Shift+3</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(350.42 64.587812)">仅当前窗口</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.2px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #8b949e" x="227.52" y="22.225312" transform="rotate(-0 227.52 22.225312)">三种截图，全屏/窗口无需手框</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p23659ca0c0">
+   <rect x="4.32" y="4.32" width="446.4" height="115.2"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,23 @@
+digraph fmtcmp {
+  graph [rankdir=LR, bgcolor="white", fontname="Noto Sans CJK SC", nodesep=0.25, ranksep=0.5, pad=0.3];
+  node  [shape=plaintext, fontname="Noto Sans CJK SC", fontsize=11];
+
+  t [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#f6f8fa"><B>格式 / 参数</B></TD>
+          <TD BGCOLOR="#f6f8fa"><B>体积</B></TD>
+          <TD BGCOLOR="#f6f8fa"><B>PSNR</B></TD>
+          <TD BGCOLOR="#f6f8fa"><B>兼容起点</B></TD></TR>
+      <TR><TD ALIGN="LEFT">JPEG 原图</TD><TD>2046 KB</TD><TD>—</TD><TD>全部</TD></TR>
+      <TR><TD ALIGN="LEFT">WebP q82</TD><TD>161 KB</TD><TD>36.8 dB</TD><TD>iOS 14 (2020)</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#dafbe1"><B>AVIF q60</B></TD>
+          <TD BGCOLOR="#dafbe1"><B>133 KB</B></TD>
+          <TD BGCOLOR="#dafbe1"><B>37.1 dB</B></TD>
+          <TD BGCOLOR="#fff8c5">iOS 16.4 (2023)</TD></TR>
+      <TR><TD ALIGN="LEFT">AVIF q50</TD><TD>79 KB</TD><TD>34.8 dB</TD>
+          <TD BGCOLOR="#fff8c5">iOS 16.4 (2023)</TD></TR>
+      <TR><TD ALIGN="LEFT">AVIF q70</TD><TD>183 KB</TD><TD>38.8 dB</TD>
+          <TD BGCOLOR="#fff8c5">iOS 16.4 (2023)</TD></TR>
+    </TABLE>
+  >];
+}
