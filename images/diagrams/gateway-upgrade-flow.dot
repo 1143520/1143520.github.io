@@ -1,0 +1,20 @@
+digraph upgrade {
+  graph [rankdir=TB, bgcolor="white", fontname="Noto Sans CJK SC", nodesep=0.35, ranksep=0.45, pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=12, color="#c9d1d9", fillcolor="#f6f8fa", penwidth=1.2];
+  edge  [color="#57606a", arrowsize=0.7, fontname="Noto Sans CJK SC", fontsize=10];
+
+  start [label="决定升级\n(有相关 commits / issue 佐证)", fillcolor="#ddf4ff", color="#54aeff"];
+  bak   [label="① 备份配置\ndocker exec ctr cat /app/config.json > bak.json", fillcolor="#fff8c5", color="#d4a72c"];
+  pull  [label="② 拉镜像并重建\ndocker compose pull && up -d", fillcolor="#f6f8fa"];
+  sleep [label="③ 等待就绪\nsleep 12（健康 ≠ 端口就绪）", fillcolor="#f6f8fa"];
+  probe [label="④ 带 KEY 探活\nGET /v1/models → 期望 200", shape=diamond, style="filled", fillcolor="#ddf4ff", color="#54aeff", height=0.9];
+  restore [label="⑤ 还原自定义配置\ndocker cp bak.json ctr:/app/config.json + restart", fillcolor="#fff8c5", color="#d4a72c"];
+  ok    [label="升级完成\n锁固定 tag，compose 不写 latest", fillcolor="#dafbe1", color="#2da44e"];
+  roll  [label="回滚\ndocker tag <旧镜像ID> :latest\n&& compose up -d", fillcolor="#ffebe9", color="#cf222e"];
+
+  start -> bak -> pull -> sleep -> probe;
+  probe -> restore [label="  200"];
+  restore -> ok;
+  probe -> roll [label="  非 200", color="#cf222e", fontcolor="#cf222e"];
+  roll -> probe [style=dashed, label="  重试", color="#8c959f"];
+}

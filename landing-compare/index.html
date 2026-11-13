@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>落地页两版对比</title>
+<style>
+:root{--bg:#0b0b0d;--panel:#14141a;--fg:#e8e4dc;--dim:#8a8578;--line:#2a2a33;--plug:#c9a227}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--fg);
+  font:14px/1.6 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  display:flex;flex-direction:column;overflow:hidden;
+}
+
+/* 顶栏 */
+.bar{
+  flex:0 0 auto;display:flex;align-items:center;gap:14px;
+  padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);
+}
+.bar h1{font-size:13px;font-weight:500;letter-spacing:.04em;margin-right:auto}
+.bar h1 span{color:var(--dim);font-weight:400}
+.seg{display:flex;border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.seg button{
+  background:transparent;color:var(--dim);border:0;padding:6px 14px;
+  font:inherit;font-size:12px;cursor:pointer;transition:.15s;
+}
+.seg button + button{border-left:1px solid var(--line)}
+.seg button.on{background:var(--fg);color:var(--bg)}
+.seg button:hover:not(.on){color:var(--fg)}
+.chk{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--dim);cursor:pointer;user-select:none}
+.chk input{accent-color:var(--plug);cursor:pointer}
+
+/* 舞台 */
+.stage{flex:1;display:flex;min-height:0;gap:1px;background:var(--line)}
+.pane{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--bg)}
+.pane header{
+  flex:0 0 auto;display:flex;align-items:baseline;gap:10px;
+  padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);
+}
+.pane .tag{
+  font-size:10px;letter-spacing:.14em;padding:3px 8px;border-radius:3px;
+  background:var(--line);color:var(--fg);
+}
+.pane.gzw .tag{background:var(--plug);color:#0b0b0d;font-weight:600}
+.pane .meta{font-size:11px;color:var(--dim);margin-left:auto}
+.pane iframe{flex:1;width:100%;border:0;background:#000}
+
+/* 竖排（手机） */
+body.vstack .stage{flex-direction:column}
+body.vstack .pane{flex:1}
+
+@media(max-width:760px){
+  .bar{flex-wrap:wrap;gap:8px;padding:8px 10px}
+  .bar h1{width:100%;font-size:12px;margin-bottom:2px}
+  .stage{flex-direction:column}
+  .pane{flex:1}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <h1>落地页对比 <span>· DSH Go</span></h1>
+  <div class="seg" id="mode">
+    <button data-v="h" class="on">左右</button>
+    <button data-v="v">上下</button>
+    <button data-v="a">手写</button>
+    <button data-v="b">归藏</button>
+  </div>
+  <label class="chk"><input type="checkbox" id="sync"> 同步滚动</label>
+</div>
+
+<div class="stage">
+
+  <div class="pane" id="paneA">
+    <header>
+      <span class="tag">A · 手写</span>
+      <span style="font-size:12px">自配 CSS</span>
+      <span class="meta">/landing-demo/</span>
+    </header>
+    <iframe id="fA" src="https://note.zhongyangblog.eu.org/landing-demo/" loading="lazy" title="手写版"></iframe>
+  </div>
+
+  <div class="pane gzw" id="paneB">
+    <header>
+      <span class="tag">B · 归藏</span>
+      <span style="font-size:12px">gz-magazine 设计系统</span>
+      <span class="meta">/landing-gz/</span>
+    </header>
+    <iframe id="fB" src="https://note.zhongyangblog.eu.org/landing-gz/" loading="lazy" title="归藏版"></iframe>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var body = document.body, fA = document.getElementById('fA'), fB = document.getElementById('fB');
+  var paneA = document.getElementById('paneA'), paneB = document.getElementById('paneB');
+  var mode = document.getElementById('mode'), syncBox = document.getElementById('sync');
+
+  /* 视图模式 */
+  mode.addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if (!b) return;
+    [...mode.children].forEach(function(x){ x.classList.toggle('on', x === b); });
+    var v = b.dataset.v;
+
+    body.classList.toggle('vstack', v === 'v');
+    paneA.style.display = (v === 'b') ? 'none' : 'flex';
+    paneB.style.display = (v === 'a') ? 'none' : 'flex';
+
+    // 单看时撑满
+    if (v === 'a' || v === 'b') {
+      var show = v === 'a' ? paneA : paneB;
+      show.style.flex = '1 1 100%';
+    } else {
+      paneA.style.flex = '1'; paneB.style.flex = '1';
+    }
+  });
+
+  /* 同步滚动：两边比例对齐（两页高度不同，用百分比而不是像素） */
+  var lock = false;
+  function bind(f1, f2){
+    f1.addEventListener('load', function(){
+      try{
+        var d = f1.contentWindow.document;
+        d.addEventListener('scroll', function(){
+          if (!syncBox.checked || lock) return;
+          lock = true;
+          try{
+            var h = d.documentElement.scrollHeight - d.documentElement.clientHeight;
+            var ratio = h > 0 ? d.documentElement.scrollTop / h : 0;
+            var d2 = f2.contentWindow.document;
+            var h2 = d2.documentElement.scrollHeight - d2.documentElement.clientHeight;
+            f2.contentWindow.scrollTo(0, ratio * h2);
+          }catch(e){}
+          setTimeout(function(){ lock = false; }, 60);
+        }, {passive:true});
+      }catch(e){}
+    });
+    // 跨域时上面的 try 会失败，退回监听 iframe 自身
+    f1.addEventListener('load', function(){
+      try { f1.contentWindow.document.documentElement.scrollHeight; }
+      catch(e){ /* 跨域，用 postMessage 方案太复杂，跳过 */ }
+    });
+  }
+  bind(fA, fB);
+  bind(fB, fA);
+
+  /* 键盘：1/2/3/4 切视图 */
+  addEventListener('keydown', function(e){
+    var map = {'1':'h','2':'v','3':'a','4':'b'};
+    if (map[e.key]) {
+      var btn = mode.querySelector('[data-v="' + map[e.key] + '"]');
+      if (btn) btn.click();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

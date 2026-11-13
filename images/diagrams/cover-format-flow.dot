@@ -1,0 +1,20 @@
+digraph coverflow {
+  graph [rankdir=TB, bgcolor="white", fontname="Noto Sans CJK SC", nodesep=0.3, ranksep=0.38, pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=11, penwidth=1.2, color="#c9d1d9", fillcolor="#f6f8fa"];
+  edge  [color="#57606a", arrowsize=0.7, fontname="Noto Sans CJK SC", fontsize=9];
+
+  s [label="① 扫描：找出 >100KB 的封面\n（HEAD 取 content-length）", fillcolor="#ddf4ff", color="#54aeff"];
+  dl [label="② 下载原图（raw.githubusercontent）\n不走 CDN，拿到的必是当前版本"];
+  enc [label="③ 编码\nWebP: Pillow quality=82 method=6\nAVIF: avifenc -q 60 -s 6", fillcolor="#fff8c5", color="#d4a72c"];
+  cmp [label="④ 逐张比对体积\n转完更大就回退，别硬用", shape=diamond, style="filled", fillcolor="#ddf4ff", color="#54aeff", height=0.95];
+  up [label="⑤ 上传 GitHub Contents API\n文件已存在必须带 sha\n（否则报 sha wasn't supplied）", fillcolor="#ffebe9", color="#cf222e"];
+  purge [label="⑥ purge.jsdelivr.net 刷缓存"];
+  js [label="⑦ 写入该 id 的 json\next / webp / avif 三份并存", fillcolor="#dafbe1", color="#2da44e"];
+  fm [label="⑧ 文章 image: 指向新格式\n带每篇唯一 ?v=<纳秒>", fillcolor="#dafbe1", color="#2da44e"];
+  verify [label="⑨ hugo build + 线上抽样 200\nofficial: 看 og:image 是否已换", fillcolor="#dafbe1", color="#2da44e"];
+
+  s -> dl -> enc -> cmp;
+  cmp -> up [label="  更小"];
+  cmp -> fm [label="  更大\n  (保持原格式)", style=dashed, color="#8c959f"];
+  up -> purge -> js -> fm -> verify;
+}

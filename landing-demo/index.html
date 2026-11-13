@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DSH Go · DeepSeekRuntime 装进口袋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* gzoil: 归藏 midnight-ink token + Oil UI motion */
+:root{
+  --paper:#0e0d0c;
+  --ink:#ece2cf;
+  --ink-2:rgba(236,226,207,.66);
+  --ink-3:rgba(236,226,207,.40);
+  --line:rgba(236,226,207,.16);
+  --accent:#d4a04a;
+  --accent-soft:rgba(212,160,74,.14);
+
+  --text-size:1.0625rem;
+  --text-leading:1.85;
+  --measure:36em;
+
+  --f-serif:'Noto Serif SC','Source Han Serif SC',Georgia,serif;
+  --f-sans:Inter,-apple-system,'PingFang SC','Noto Sans SC',sans-serif;
+  --f-mono:'IBM Plex Mono','JetBrains Mono',monospace;
+
+  --spring-heavy:cubic-bezier(.34,1.56,.64,1);
+  --spring-mech:cubic-bezier(.16,1.02,.28,1);
+  --draw-line:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--f-sans);font-size:var(--text-size);
+  line-height:var(--text-leading);overflow-x:hidden;
+}
+:lang(zh) p{
+  text-align:justify;text-justify:inter-character;
+  line-break:strict;text-spacing-trim:normal;
+  letter-spacing:0;overflow-wrap:break-word;
+  max-width:var(--measure);margin-bottom:1em;text-indent:0;
+}
+:lang(zh) em{font-style:normal;text-emphasis:filled dot;text-emphasis-position:under right}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 80px}
+.chrome{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:32px 0 16px;font-family:var(--f-mono);font-size:12px;
+  letter-spacing:.14em;color:var(--ink-3);
+  border-bottom:2px solid var(--accent-soft);
+}
+
+/* ===== 首屏景深 ===== */
+.hero{
+  position:relative;min-height:86vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:110px 0 80px;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:-12%;will-change:transform;pointer-events:none}
+.hero-bg svg{width:100%;height:100%}
+.hero-inner{position:relative;z-index:1;will-change:transform}
+
+.hero .kicker{
+  font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;
+  color:var(--accent);margin-bottom:30px;
+  display:flex;align-items:center;gap:14px;
+}
+.hero .kicker::before{content:"";width:34px;height:1px;background:var(--accent)}
+
+.hero h1{
+  font-family:var(--f-serif);font-weight:700;
+  font-size:clamp(44px,6.2vw,88px);line-height:1.16;
+  letter-spacing:-0.018em;max-width:12em;color:var(--ink);
+  transform-origin:left top;will-change:transform;
+}
+.hero h1 .dim{color:var(--accent)}
+
+.hero .sub{
+  margin-top:34px;max-width:32em;font-size:1.08rem;
+  line-height:1.8;color:var(--ink-2);
+}
+
+.hero .cta-row{
+  margin-top:52px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--f-sans);font-size:.95rem;font-weight:500;
+  padding:15px 30px;text-decoration:none;letter-spacing:.02em;
+  transition:transform .4s var(--spring-mech),background .25s,color .25s,border-color .25s;
+}
+.btn-primary{
+  background:var(--accent);color:var(--paper);border:1.5px solid var(--accent);
+}
+.btn-primary:hover{background:transparent;color:var(--accent);transform:translateY(-2px)}
+.btn-ghost{
+  background:transparent;color:var(--ink);border:1.5px solid var(--line);
+}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+.hero .fine{
+  margin-top:38px;font-family:var(--f-mono);font-size:11.5px;
+  letter-spacing:.06em;color:var(--ink-3);
+}
+
+/* ===== 数字条：滚动计数 ===== */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--line);margin:0 0 96px;
+}
+.stats > div{
+  background:var(--paper);padding:30px 24px;
+  opacity:0;transform:translateY(-42px) scale(.97);
+  transition:transform .8s var(--spring-heavy),opacity .45s linear;
+}
+.stats.on > div{opacity:1;transform:none}
+.stats.on > div:nth-child(1){transition-delay:0s}
+.stats.on > div:nth-child(2){transition-delay:.06s}
+.stats.on > div:nth-child(3){transition-delay:.12s}
+.stats.on > div:nth-child(4){transition-delay:.18s}
+.stats .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:var(--ink-3);margin-bottom:10px}
+.stats .v{font-family:var(--f-mono);font-size:1.7rem;font-weight:500;color:var(--accent)}
+.stats .v small{font-size:.5em;color:var(--ink-3);margin-left:2px}
+
+/* ===== 功能：按材质出场 ===== */
+.section{padding:0 0 96px}
+.section-head{margin-bottom:44px}
+.section-head .n{
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.2em;
+  color:var(--accent);display:block;margin-bottom:14px;
+}
+.section-head h2{
+  font-family:var(--f-serif);font-weight:600;
+  font-size:clamp(28px,3.4vw,42px);line-height:1.3;
+  letter-spacing:-.01em;max-width:18em;
+}
+.section-head p{margin-top:18px;max-width:var(--measure);color:var(--ink-2);font-size:1rem}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.feature{
+  background:var(--paper);padding:36px 28px 40px;
+  opacity:0;transform:translateY(-40px);
+  transition:transform .76s var(--spring-heavy),opacity .42s linear;
+}
+.free-box{
+  background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px;margin-bottom:12px;
+}
+.features.on .feature{opacity:1;transform:none}
+.features.on .feature:nth-child(1){transition-delay:0s}
+.features.on .feature:nth-child(2){transition-delay:.07s}
+.features.on .feature:nth-child(3){transition-delay:.14s}
+
+.feature .ico{
+  width:34px;height:34px;margin-bottom:22px;
+  stroke:var(--accent);fill:none;stroke-width:1.4;
+}
+.feature h3{
+  font-family:var(--f-sans);font-weight:600;font-size:1.06rem;
+  margin-bottom:12px;line-height:1.5;
+}
+.feature p{
+  font-size:.94rem;line-height:1.78;color:var(--ink-2);
+  max-width:none;margin:0;
+}
+
+/* ===== 一条对比：线条沿方向描出 ===== */
+.compare-block{padding:0 0 96px}
+.compare-rows{max-width:100%}
+.row{
+  display:grid;grid-template-columns:180px 1fr 1fr;
+  gap:0;align-items:center;
+  padding:22px 0;border-bottom:1px solid var(--line);
+  opacity:0;transform:translateX(-22px);
+  transition:transform .6s var(--draw-line),opacity .42s linear;
+}
+.rows.on .row{opacity:1;transform:none}
+.rows.on .row:nth-child(1){transition-delay:0s}
+.rows.on .row:nth-child(2){transition-delay:.08s}
+.rows.on .row:nth-child(3){transition-delay:.16s}
+.row .dim{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;color:var(--ink-3)}
+.row .bad{font-family:var(--f-mono);font-size:.92rem;color:var(--ink-3);text-decoration:line-through}
+.row .good{font-family:var(--f-mono);font-size:.92rem;color:var(--accent)}
+
+/* ===== 收尾 CTA ===== */
+.final{
+  text-align:center;padding:110px 0 96px;
+  border-top:2px solid var(--accent-soft);
+}
+.final h2{
+  font-family:var(--f-serif);font-weight:600;
+  font-size:clamp(30px,4.2vw,54px);line-height:1.24;
+  letter-spacing:-.015em;max-width:16em;margin:0 auto 26px;
+}
+.final p{
+  margin:0 auto 44px;max-width:28em;color:var(--ink-2);
+  text-align:center;text-justify:auto;
+}
+.final .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+.foot{
+  border-top:1px solid var(--line);
+  padding:28px 0 60px;font-family:var(--f-mono);font-size:11.5px;
+  letter-spacing:.1em;color:var(--ink-3);
+  display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;
+}
+
+.rise{opacity:0;transform:translateY(16px);transition:transform .6s var(--spring-mech),opacity .4s linear}
+.rise.on{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .stats > div,.feature,.row,.rise{opacity:1!important;transform:none!important}
+}
+@media(max-width:1024px){
+  .wrap{padding:0 40px}
+  .stats,.features{grid-template-columns:repeat(2,1fr)}
+  .row{grid-template-columns:120px 1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{padding:0 22px}
+  .hero{padding:76px 0 60px;min-height:auto}
+  .hero h1{font-size:clamp(34px,9.2vw,50px)}
+  .stats,.features{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:6px;padding:18px 0}
+  .row .dim{margin-bottom:4px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="chrome">
+    <span>DSH GO · ANDROID</span>
+    <span>ANDROID 8+ · AGPL-3.0</span>
+  </div>
+
+  <!-- 首屏 -->
+  <header class="hero">
+    <div class="hero-bg" id="heroBg">
+      <svg viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="rgba(212,160,74,.16)"/>
+            <stop offset="100%" stop-color="rgba(212,160,74,0)"/>
+          </radialGradient>
+        </defs>
+        <circle cx="940" cy="240" r="300" fill="url(#g1)"/>
+        <circle cx="940" cy="240" r="278" fill="none" stroke="rgba(212,160,74,.14)" stroke-width="1"/>
+        <circle cx="940" cy="240" r="186" fill="none" stroke="rgba(212,160,74,.10)" stroke-width="1"/>
+        <circle cx="940" cy="240" r="94" fill="none" stroke="rgba(212,160,74,.07)" stroke-width="1"/>
+        <line x1="0" y1="620" x2="1200" y2="620" stroke="rgba(236,226,207,.05)"/>
+      </svg>
+    </div>
+
+    <div class="hero-inner" id="heroInner">
+      <div class="kicker">DEEPSEEKRUNTIME · 手机端</div>
+      <h1 id="heroTitle">把运行环境<br><span class="dim">装进旧手机。</span></h1>
+      <p class="sub">内置 Linux 环境，免 Root、免 Termux。手机上直接跑 agent，也能一键切到电脑上已经开着的那个会话。旧手机装上，就是一台独立的执行机。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/ccch1mneyyy/dsh-go/releases/latest">下载 APK</a>
+        <a class="btn btn-ghost" href="https://github.com/ccch1mneyyy/dsh-go">查看源码</a>
+      </div>
+      <p class="fine">真仓库是 ccch1mneyyy/dsh-Go，中间是数字 1，不是字母 i</p>
+    </div>
+  </header>
+
+  <!-- 数字条 -->
+  <div class="stats">
+    <div><div class="k">STARTED</div><div class="v" data-count="17868">17868</div></div>
+    <div><div class="k">MIN ANDROID</div><div class="v" data-count="8" data-suffix="+">8+</div></div>
+    <div><div class="k">ROOT 要求</div><div class="v">无</div></div>
+    <div><div class="k">包体积</div><div class="v" data-count="49" data-suffix="MB">49MB</div></div>
+  </div>
+
+  <!-- 功能 -->
+  <section class="section">
+    <div class="section-head rise">
+      <span class="n">01 / 三件事</span>
+      <h2>不需要电脑，也不需要 Root。</h2>
+      <p>内置的 Linux 环境在应用私有目录里，卸载即清空，动不到系统分区。</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 9h18M7 18v2M17 18v2"/></svg>
+        <h3>完整的终端</h3>
+        <p>bash、git、python 都能跑，不依赖 Termux。环境隔离在 App 私有目录，卸载后不留痕迹。</p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 8-8M20 12a8 8 0 0 1-8 8"/><circle cx="12" cy="12" r="2.4"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/></svg>
+        <h3>电脑会话接着用</h3>
+        <p>电脑上跑到一半的任务，手机上打开就能继续看，两边共用同一份上下文。</p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4.6 3.4 7.4 8 8 4.6-.6 8-3.4 8-8V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>旧手机就是隔离区</h3>
+        <p>专门一台设备跑 agent，主力机上不装任何执行入口。物理隔离比权限隔离可靠。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 对比 -->
+  <section class="compare-block">
+    <div class="section-head rise">
+      <span class="n">02 / 和远程控制有什么不同</span>
+      <h2>一个是真的在手机上跑。</h2>
+    </div>
+    <div class="rows compare-rows">
+      <div class="row">
+        <span class="dim">断网之后</span>
+        <span class="bad">远程方案直接失联</span>
+        <span class="good">本机照常执行</span>
+      </div>
+      <div class="row">
+        <span class="dim">数据落在哪</span>
+        <span class="bad">传回电脑才处理</span>
+        <span class="good">留在设备本地</span>
+      </div>
+      <div class="row">
+        <span class="dim">需要 Root 吗</span>
+        <span class="bad">看方案</span>
+        <span class="good">不需要</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收尾 -->
+  <section class="final">
+    <h2>旧手机一直在抽屉里，<br>它可以开始干活了。</h2>
+    <p>Android 8 以上，arm64 包。装过早期测试包的先卸载，签名不同不能覆盖。</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="https://github.com/ccch1mneyyy/dsh-go/releases/latest">下载 APK</a>
+      <a class="btn btn-ghost" href="https://go.dshtui.com/download">官网下载页</a>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>gzoil · 归藏 token × Oil UI motion</span>
+    <span>2026-11-10</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 首屏景深：滚动驱动，往回滚倒放 */
+  var hero = document.querySelector('.hero'),
+      title = document.getElementById('heroTitle'),
+      bg = document.getElementById('heroBg'),
+      inner = document.getElementById('heroInner');
+  function onScroll(){
+    if (reduce || !hero) return;
+    var r = hero.getBoundingClientRect(), h = hero.offsetHeight;
+    var p = Math.min(1, Math.max(0, -r.top / (h * .9)));
+    title.style.transform = 'scale(' + (1 - p * .18) + ') translateY(' + (-p * 28) + 'px)';
+    title.style.opacity = String(1 - p * .5);
+    bg.style.transform = 'translateY(' + (p * 70) + 'px) scale(' + (1 + p * .07) + ')';
+    inner.style.transform = 'translateY(' + (-p * 40) + 'px)';
+  }
+  addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* 出场：提前 10% 触发，避免视口内空白 */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var el = e.target, d = +(el.dataset.delay || 0);
+      setTimeout(function(){
+        el.classList.add('on');
+        if (el.classList.contains('stats')) countUp(el);
+      }, d);
+      io.unobserve(el);
+    });
+  }, {rootMargin:'0px 0px 10% 0px', threshold:.01});
+
+  document.querySelectorAll('.rise,.stats,.features,.rows').forEach(function(el){
+    if (reduce) { el.classList.add('on'); return; }
+    io.observe(el);
+  });
+
+  /* 数字：高位先停，末位后停 */
+  function countUp(root){
+    root.querySelectorAll('[data-count]').forEach(function(el){
+      var target = parseFloat(el.dataset.count),
+          suffix = el.dataset.suffix || '',
+          isF = String(target).indexOf('.') > -1,
+          t0 = performance.now(), dur = 1100;
+      if (el.textContent.trim() === '' ) return;
+      function step(now){
+        var k = Math.min(1, (now - t0) / dur);
+        var eased = 1 - Math.pow(1 - k, 3);
+        el.textContent = (isF ? (target * eased).toFixed(1) : Math.round(target * eased)) + suffix;
+        if (k < 1) requestAnimationFrame(step);
+        else el.textContent = (isF ? target.toFixed(1) : target) + suffix;
+      }
+      el.textContent = '0' + suffix;
+      requestAnimationFrame(step);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
