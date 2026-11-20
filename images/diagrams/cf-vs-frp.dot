@@ -1,0 +1,47 @@
+digraph cf_vs_frp {
+  rankdir=TB;
+  bgcolor="#020617";
+  splines=spline;
+  nodesep=0.55;
+  ranksep=0.5;
+  fontname="Noto Sans CJK SC";
+  fontcolor="#e2e8f0";
+  label=<<B>Cloudflare Tunnel  vs  FRP</B><BR/><FONT POINT-SIZE="10" COLOR="#94a3b8">两种内网穿透的结构差异 · 2026-11-11</FONT>>;
+  labelloc=t;
+  fontsize=18;
+
+  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=11, color="#334155", fontcolor="#e2e8f0", penwidth=1.5, fill="#0f172a"];
+  edge [fontname="Noto Sans CJK SC", fontsize=9, color="#64748b", fontcolor="#94a3b8", arrowsize=0.8, penwidth=1.4];
+
+  subgraph cluster_cf {
+    label=<<B>① Cloudflare Tunnel（托管）</B>>;
+    fontsize=13; fontcolor="#22d3ee"; color="#22d3ee"; style="rounded,dashed"; penwidth=1.6; margin=16;
+    cf_user [label="用户 / 手机浏览器\n任意网络", fill="#083344", color="#22d3ee"];
+    cf_edge [label="Cloudflare 边缘节点（全球 Anycast）\nDNS 托管 · TLS 终止 · WAF / Access\n→ 这就是你域名解析到的地方", fill="#0e2a3b", color="#38bdf8"];
+    cf_cld [label="cloudflared（在你的内网 / VPS 上）\n主动向外建 QUIC 长连接\n不开放任何入站端口", fill="#064e3b", color="#34d399"];
+    cf_svc [label="内网服务\n127.0.0.1:8080（NextTodo）", fill="#4c1d95", color="#a78bfa"];
+
+    cf_user -> cf_edge [label="  HTTPS  "];
+    cf_edge -> cf_cld [label="  隧道（出站反向通道）  "];
+    cf_cld -> cf_svc [label="  本机回环  "];
+  }
+
+  subgraph cluster_frp {
+    label=<<B>② FRP（自建）</B>>;
+    fontsize=13; fontcolor="#fbbf24"; color="#fbbf24"; style="rounded,dashed"; penwidth=1.6; margin=16;
+    fp_user [label="用户 / 手机浏览器\n任意网络", fill="#083344", color="#22d3ee"];
+    fp_vps [label="你的 VPS（必须公网 IP）\nfrps 监听 7000 与 38080 等端口\n证书、反代、防火墙全自己配", fill="#78350f", color="#fbbf24"];
+    fp_cli [label="frpc（在你的内网）\n主动连 frps 建控制通道\n再把本地端口映射出去", fill="#064e3b", color="#34d399"];
+    fp_svc [label="内网服务\n127.0.0.1:8080", fill="#4c1d95", color="#a78bfa"];
+
+    fp_user -> fp_vps [label="  HTTPS（证书你自己装）  "];
+    fp_vps -> fp_cli [label="  控制通道 + 转发  "];
+    fp_cli -> fp_svc [label="  本机回环  "];
+  }
+
+  note [shape=note, style="filled", fillcolor="#111827", color="#475569", fontcolor="#cbd5e1", fontsize=10,
+        label="关键差别：① 谁做入口 —— CF 用别人的全球边缘，FRP 用你自己那台 VPS\l② 谁终止 TLS —— CF 自动证书，FRP 要自己签/配\l③ 出故障时 —— CF 看 Cloudflare 状态页，FRP 全看你自己\l④ 数据面 —— 两者都是「内网主动出站」，都不在路由器上开端口\l"];
+
+  cf_svc -> note [style=invis];
+  fp_svc -> note [style=invis];
+}

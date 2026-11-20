@@ -1,0 +1,277 @@
+  /* ══════════════════════════════════════
+     UI OVERLAY — Settings, Share, Edit
+     Shared across all themes
+     ══════════════════════════════════════ */
+
+  /* ── Editable text ── */
+  [contenteditable] {
+    outline: none;
+    cursor: text;
+    transition: background 0.15s;
+    border-radius: 2px;
+  }
+  [contenteditable]:hover {
+    background: rgba(0,0,0,0.03);
+  }
+  [contenteditable]:focus {
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0 0 0 2px var(--accent, #002FA7);
+  }
+
+  /* ── FAB container (bottom-right) ── */
+  .hf-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+  }
+
+  .hf-fab-btn {
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--fg, #0a0a0a);
+    color: var(--bg, #fafaf8);
+    border: none; border-radius: 0; cursor: pointer;
+    transition: opacity 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .hf-fab-btn:hover { opacity: 0.85; }
+  .hf-fab-btn svg { width: 20px; height: 20px; }
+
+  /* ── Dropdown menu (share + settings) ── */
+  .hf-dropdown {
+    position: absolute;
+    background: var(--fg, #0a0a0a);
+    color: var(--bg, #fafaf8);
+    min-width: 220px;
+    padding: 8px 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(4px);
+    transition: opacity 0.15s, transform 0.15s;
+    z-index: 210;
+  }
+  .hf-dropdown.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .hf-fab .hf-dropdown { right: 0; bottom: calc(100% + 6px); }
+
+  .hf-dropdown-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 16px;
+    font-family: var(--font-sans, sans-serif);
+    font-size: 13px; font-weight: 400;
+    cursor: pointer;
+    transition: background 0.1s;
+    border: none; background: none; color: inherit;
+    width: 100%; text-align: left;
+  }
+  .hf-dropdown-item:hover { background: rgba(255,255,255,0.08); }
+  .hf-dropdown-item svg { width: 16px; height: 16px; opacity: 0.5; }
+
+  .hf-dropdown-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 6px 0;
+  }
+
+  .hf-dropdown-label {
+    padding: 8px 16px 4px;
+    font-family: var(--font-mono, monospace);
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    opacity: 0.35;
+  }
+
+  /* ── Color swatches ── */
+  .hf-swatches {
+    display: flex; gap: 6px;
+    padding: 6px 16px 10px;
+  }
+  .hf-swatch {
+    -webkit-appearance: none; appearance: none; padding: 0;
+    width: 28px; height: 28px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.15s;
+    position: relative;
+  }
+  .hf-swatch:hover { border-color: rgba(255,255,255,0.3); }
+  .hf-swatch.active { border-color: var(--bg, #fff); }
+  .hf-swatch.active::after {
+    content: '✓';
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+
+  /* ── Font options ── */
+  .hf-font-options {
+    display: flex; flex-direction: column; gap: 2px;
+    padding: 4px 16px 8px;
+  }
+  .hf-font-option {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 8px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none; background: none; color: inherit;
+    width: 100%; text-align: left;
+    transition: background 0.1s;
+  }
+  .hf-font-option:hover { background: rgba(255,255,255,0.08); }
+  .hf-font-option.active { background: rgba(255,255,255,0.12); }
+  .hf-font-option .font-preview {
+    font-size: 15px; font-weight: 300;
+    opacity: 0.7;
+  }
+  .hf-font-option .font-name {
+    font-family: var(--font-mono, monospace);
+    font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; opacity: 0.4;
+  }
+
+  /* ── Print hide UI ── */
+  @media print {
+    .hf-fab,.toc,.toc-scrim { display: none !important; }
+    [contenteditable] { box-shadow: none !important; background: none !important; }
+  }
+
+  /* ── TOC layout behaviour (shared) ──
+     Root cause of the old "TOC covers half the article" bug: the panel is a
+     280px fixed overlay, while the article container starts ~120px from the
+     left edge on a 1440px screen, so opening it always covered the text.
+     Fix: on wide screens opening the TOC pushes the page (body padding-left),
+     so nothing is covered; on narrow screens it is a drawer with a scrim and
+     closes on outside click / Esc. */
+  .toc { width: 0; height: 0; overflow: visible; pointer-events: none; }
+  .toc-toggle, .toc-panel { pointer-events: auto; }
+  .toc-panel { visibility: hidden; transition: transform 0.25s cubic-bezier(.2,0,.38,.9), visibility 0s linear 0.25s; }
+  .toc-open .toc-panel { visibility: visible; transition: transform 0.25s cubic-bezier(.2,0,.38,.9); }
+  body { transition: padding-left 0.25s cubic-bezier(.2,0,.38,.9); }
+  .toc-scrim { display: none; }
+  @media (min-width: 1025px) {
+    html.toc-is-open body { padding-left: 300px; }
+  }
+  @media (max-width: 1024px) {
+    .toc-scrim {
+      position: fixed; inset: 0; z-index: 99;
+      background: rgba(0,0,0,0.28);
+    }
+    html.toc-is-open .toc-scrim { display: block; }
+    .toc-panel { width: min(300px, 86vw); }
+  }
+
+  /* ══════════════════════════════════════
+     PRINT / PDF — pagination (shared by both styles)
+     Root cause of the "half-empty page" bug: style-magazine.css had
+     `.hero, .section { break-inside: avoid }`, and both themes lay sections
+     out as CSS grids; any chapter taller than the remaining space jumped to
+     the next page whole. Rules now: only small atomic blocks avoid breaking,
+     long containers flow across pages, headings stick to what follows.
+     ══════════════════════════════════════ */
+  /* Page margins live inside the page (container padding repeated on every page via
+     box-decoration-break), so the theme's paper colour fills the whole sheet — Chrome
+     doesn't paint @page margins, which left a white frame around dark themes. */
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body, body * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html { background: var(--bg); }
+    html.toc-is-open body, body { padding-left: 0 !important; }
+    .container { max-width: none !important; padding: 14mm 12mm 16mm !important; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .embed-label, .summary-label, .aside-title { break-after: avoid; }
+    /* grid fragmentation is fragile — flow sections as blocks on paper */
+    .section, .hero, footer, .container > .pullquote { display: block !important; }
+    .section-header { display: block !important; }
+    .section, .hero, .process, .gallery, .gallery-grid, .summary-card,
+    .summary-grid, .table-wrap, table, ul, ol, pre, .chart-row,
+    .embed-card, .data-figure { break-inside: auto !important; }
+
+    /* headings never end a page */
+    h1, h2, h3, h4, h5, .section-number, .section-header, .hero-kicker,
+    .def-card-label, .hl-label, .toc-header { break-after: avoid; break-inside: avoid; }
+    p { orphans: 3; widows: 3; }
+
+    /* small atomic blocks: keep whole */
+    blockquote, .def-card, .def-card-swiss, .highlight-card, .highlight-swiss,
+    .pullquote, .pullquote-swiss, .aside-card, .process-step, .big-number,
+    .summary-item, .gallery-item, li, tr, .callout { break-inside: avoid; }
+
+    /* image + caption travel together; cap height (120mm ≈ 45% of an A4 text area). Residual gap: a heading kept with a big figure can still leave up to ~half a page — intended (no orphan heading). so a figure never strands more than ~half a page */
+    figure, .figure-card { break-inside: avoid; }
+    figure img, .figure-card img, img { max-height: 120mm; width: auto; max-width: 100%; object-fit: contain; }
+    figcaption, .figure-caption, .caption { break-before: avoid; }
+    pre { white-space: pre-wrap; word-break: break-all; }
+    .section { padding-top: 12mm !important; padding-bottom: 4mm !important; }
+    a { text-decoration: none; }
+  }
+
+  /* ══════════════════════════════════════
+     PRINT v0.14 — blank-space budget (≤25% per page)
+     A block that can't split leaves at most its own height as a gap, so every
+     unsplittable block is capped well under a quarter page; everything tall
+     (tables, charts, quotes) is allowed to split. Screen layout untouched.
+     ══════════════════════════════════════ */
+  @media print {
+    .section { padding-top: 5mm !important; padding-bottom: 2mm !important; margin-top: 0 !important; border: 0 !important; }
+    .section::before { content: none !important; }
+    .section > .section-number { margin-bottom: 2mm !important; }
+    .section h2, .section-header { margin-bottom: 4mm !important; }
+    .hero { padding-top: 0 !important; padding-bottom: 4mm !important; }
+    .hero::after { margin-top: 3mm !important; }
+    .doc-chrome { padding-top: 0 !important; padding-bottom: 4mm !important; }
+    .hero-cover, .hero-cover .hero-bg { min-height: 0 !important; height: 60mm !important; }
+
+    /* media: shrink to fit instead of jumping */
+    figure img, .figure-card img, .img-row img, .img-strip img, img { max-height: 58mm !important; width: auto !important; max-width: 100% !important; object-fit: contain !important; margin-left: auto; margin-right: auto; }
+    .img-row img { max-height: 42mm !important; }
+    .media-embed video, .media-embed iframe { max-height: 58mm !important; }
+    figure, .figure-card { margin-top: 3mm !important; margin-bottom: 3mm !important; }
+    .figure-card > figcaption { margin-top: 1.5mm !important; text-align: center; }  /* images shrink and centre on paper */
+
+    /* headings stay with the next *line*, not with a whole big block */
+    h2, h3, .section-header, .section-number { break-after: avoid; }
+    .section-header + .figure-card, h2 + .figure-card, .section-number + h2 + .figure-card,
+    h2 + .table-wrap, h2 + .hchart, .section-header + .hchart, .section-header + .table-wrap { break-before: auto !important; }
+
+    /* tables: split across pages, header row repeats */
+    .table-wrap, .table-wrap table { break-inside: auto !important; overflow: visible !important; }
+    .table-wrap thead { display: table-header-group; }
+    .table-wrap tr { break-inside: avoid; }
+    .table-caption { break-after: avoid; }
+
+    /* charts: allowed to split between rows/groups */
+    .hchart { break-inside: auto !important; padding-top: 4mm !important; padding-bottom: 4mm !important; margin-top: 4mm !important; margin-bottom: 4mm !important; }
+    .hc-row, .hc-group, .hc-legend { break-inside: avoid; }
+    .hc-title, .hc-legend { break-after: avoid; }
+
+    /* quotes / cards may split when long; small ones still stay whole via orphans/widows */
+    blockquote, .pullquote, .pullquote-swiss, .highlight-card, .highlight-swiss { break-inside: auto !important; }
+    .pullquote, .pullquote-swiss { padding-top: 5mm !important; padding-bottom: 5mm !important; margin-top: 4mm !important; margin-bottom: 4mm !important; }
+    .img-row, .img-strip-wrap { margin-top: 3mm !important; margin-bottom: 3mm !important; }
+    p { orphans: 2; widows: 2; }
+  }
+  @media print {
+    figure img, .figure-card img, img { max-height: 54mm !important; }
+    .img-strip { display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+    .img-strip .figure-card { flex: none !important; }
+    .img-strip img, .img-row img { max-height: 34mm !important; }
+  }
+  @media print {
+    /* heading followed directly by an unsplittable media block: don't drag the heading along */
+    .section-header:has(+ .figure-card), .section-header:has(+ .img-row), .section-header:has(+ .media-embed),
+    h2:has(+ .figure-card), h2:has(+ .img-row), h2:has(+ .media-embed),
+    .section-number:has(+ h2 + .figure-card) { break-after: auto !important; }
+  }
+  @media print { figure img, .figure-card img, img { max-height: 50mm !important; } .section-header .section-number { font-size: 20px !important; } }
+  @media print { .section-header + .figure-card img, h2 + .figure-card img { max-height: 38mm !important; } }
+  @media print { .section-header .section-number { display: inline-block !important; margin: 0 4mm 0 0 !important; } .section-header h2 { display: inline !important; } .section-header { margin-bottom: 3mm !important; } .figure-card { margin-top: 2mm !important; } }
+  @media print { h3 + .figure-card img { max-height: 38mm !important; } .hc-group { padding: 2mm 0 !important; } .hc-group .hc-bar { height: 10px !important; } .hc-bars { gap: 3px !important; } .hc-legend { margin-bottom: 3mm !important; } .hc-title { margin-bottom: 3mm !important; } .hc-row { padding: 1mm 0 !important; } .hc-bar { height: 13px !important; } }

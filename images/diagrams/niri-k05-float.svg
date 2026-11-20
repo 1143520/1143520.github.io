@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="440.64pt" height="145.44pt" viewBox="0 0 440.64 145.44" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-31T13:50:46.281291</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 145.44 
+L 440.64 145.44 
+L 440.64 0 
+L 0 0 
+z
+" style="fill: #0d1117"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 22.32 106.92 
+L 137.52 106.92 
+L 137.52 30.92 
+L 22.32 30.92 
+z
+" clip-path="url(#pc7e9253e5f)" style="fill: #1c2430; stroke: #c9d1d9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 144.72 106.92 
+L 259.92 106.92 
+L 259.92 30.92 
+L 144.72 30.92 
+z
+" clip-path="url(#pc7e9253e5f)" style="fill: #161b22; stroke: #c9d1d9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 97.92 89.82 
+L 227.52 89.82 
+L 227.52 36.62 
+L 97.92 36.62 
+z
+" clip-path="url(#pc7e9253e5f)" style="fill: #2f6f9f; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 306.72 106.92 
+L 414.72 106.92 
+L 414.72 30.92 
+L 306.72 30.92 
+z
+" clip-path="url(#pc7e9253e5f)" style="fill: #1c2430; stroke: #c9d1d9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c9d1d9" x="79.92" y="71.615312" transform="rotate(-0 79.92 71.615312)">窗口 A</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c9d1d9" x="202.32" y="71.615312" transform="rotate(-0 202.32 71.615312)">窗口 B</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c9d1d9" x="162.72" y="65.66375" transform="rotate(-0 162.72 65.66375)">浮动窗口（Mod+T）</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(346.72 67.443437)">占满整列</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(351.97 75.427812)">Mod+F</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #8b949e" x="25.92" y="22.035625" transform="rotate(-0 25.92 22.035625)">(a) 浮动窗口浮在列之上</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #8b949e" x="310.32" y="22.035625" transform="rotate(-0 310.32 22.035625)">(b) 最大化</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc7e9253e5f">
+   <rect x="4.32" y="4.32" width="432" height="136.8"/>
+  </clipPath>
+ </defs>
+</svg>

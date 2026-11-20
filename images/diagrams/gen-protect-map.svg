@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="495.36pt" height="257.76pt" viewBox="0 0 495.36 257.76" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-20T15:47:41.606998</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 257.76 
+L 495.36 257.76 
+L 495.36 0 
+L 0 0 
+z
+" style="fill: #0d1117"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 95.904 128.88 
+L 115.488 128.88 
+L 115.488 53.28 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 115.488 53.28 
+Q 122.832 53.28 129.169769 53.28 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 125.969769 51.68 
+L 129.169769 53.28 
+L 125.969769 54.88 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 115.488 128.88 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 115.488 128.88 
+Q 122.832 128.88 129.169769 128.88 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 125.969769 127.28 
+L 129.169769 128.88 
+L 125.969769 130.48 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 115.488 128.88 
+L 115.488 204.48 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 115.488 204.48 
+Q 122.832 204.48 129.169769 204.48 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 125.969769 202.88 
+L 129.169769 204.48 
+L 125.969769 206.08 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 335.808 53.28 
+L 350.496 53.28 
+L 350.496 55.8 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 350.496 55.8 
+Q 357.84 55.8 364.177769 55.8 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 360.977769 54.2 
+L 364.177769 55.8 
+L 360.977769 57.4 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 335.808 128.88 
+L 350.496 128.88 
+L 350.496 131.4 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 350.496 131.4 
+Q 357.84 131.4 364.177769 131.4 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 360.977769 129.8 
+L 364.177769 131.4 
+L 360.977769 133 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 335.808 204.48 
+L 350.496 204.48 
+L 350.496 201.96 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke-dasharray: 3.33,1.44; stroke-dashoffset: 0; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 350.496 201.96 
+Q 357.84 201.96 364.177769 201.96 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 360.977769 200.36 
+L 364.177769 201.96 
+L 360.977769 203.56 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 54.288 101.16 
+L 54.288 88.56 
+" clip-path="url(#pc15ada2b59)" style="fill: none; stroke-dasharray: 0.6,0.99; stroke-dashoffset: 0; stroke: #8b949e; stroke-width: 0.6"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 12.672 156.6 
+L 95.904 156.6 
+L 95.904 101.16 
+L 12.672 101.16 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #161b22; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 130.176 81 
+L 335.808 81 
+L 335.808 25.56 
+L 130.176 25.56 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #161b22; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 130.176 156.6 
+L 335.808 156.6 
+L 335.808 101.16 
+L 130.176 101.16 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #161b22; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 130.176 232.2 
+L 335.808 232.2 
+L 335.808 176.76 
+L 130.176 176.76 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #161b22; stroke: #8b949e; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 365.184 83.52 
+L 482.688 83.52 
+L 482.688 28.08 
+L 365.184 28.08 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #1c2430; stroke: #3fb950; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 365.184 159.12 
+L 482.688 159.12 
+L 482.688 103.68 
+L 365.184 103.68 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #1c2430; stroke: #3fb950; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 365.184 229.68 
+L 482.688 229.68 
+L 482.688 174.24 
+L 365.184 174.24 
+z
+" clip-path="url(#pc15ada2b59)" style="fill: #161b22; stroke: #8b949e; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(24.288 126.555)">发电机定子/转子</text>
+    <text style="font-size: 8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(34.288 136.83)">及其引出线</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.6px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(187.392 50.907969)">主保护（机内故障，瞬时）</text>
+    <text style="font-size: 7.6px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(187.392 60.980938)">纵差 · 匝间 · 定子接地</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(187.492 122.295625)">异常工况保护（按规程分级）</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(176.992 131.381953)">过负荷 · 过励磁 · 低频 · 过压</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(194.492 140.481953)">失步 · 失磁 · 逆功率</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(215.492 197.922969)">后备与闭锁</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(187.492 206.968281)">阻抗后备 · CT/PT 断线闭锁</text>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(203.242 216.095625)">转子一点/两点接地</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7.6px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(416.336 53.576406)">跳闸</text>
+    <text style="font-size: 7.6px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(399.236 63.441562)">断路器 + 灭磁</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7.2px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(396.936 129.279375)">减出力 / 切励磁</text>
+    <text style="font-size: 7.2px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(398.736 138.61125)">发信号（分级）</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.2px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(402.336 199.8675)">闭锁其他保护</text>
+    <text style="font-size: 7.2px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(413.136 209.157187)">不出口</text>
+   </g>
+   <g id="text_8">
+    <g id="patch_15">
+     <path d="M 36.788 83.1 
+L 71.788 83.1 
+Q 72.908 83.1 72.908 81.98 
+L 72.908 74.98 
+Q 72.908 73.86 71.788 73.86 
+L 36.788 73.86 
+Q 35.668 73.86 35.668 74.98 
+L 35.668 81.98 
+Q 35.668 83.1 36.788 83.1 
+z
+" style="fill: #0d1117"/>
+    </g>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #8b949e" x="54.288" y="80.995625" transform="rotate(-0 54.288 80.995625)">被保护对象</text>
+   </g>
+   <g id="text_9">
+    <g id="patch_16">
+     <path d="M 336.496 25.14 
+L 364.496 25.14 
+Q 365.616 25.14 365.616 24.02 
+L 365.616 17.02 
+Q 365.616 15.9 364.496 15.9 
+L 336.496 15.9 
+Q 335.376 15.9 335.376 17.02 
+L 335.376 24.02 
+Q 335.376 25.14 336.496 25.14 
+z
+" style="fill: #0d1117"/>
+    </g>
+    <text style="font-size: 7px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #8b949e" x="350.496" y="23.035625" transform="rotate(-0 350.496 23.035625)">动作出口</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc15ada2b59">
+   <rect x="2.88" y="2.88" width="489.6" height="252"/>
+  </clipPath>
+ </defs>
+</svg>

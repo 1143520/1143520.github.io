@@ -1,0 +1,30 @@
+digraph fallback {
+  graph [rankdir=TB, bgcolor="white", fontname="Noto Sans CJK SC", nodesep=0.3, ranksep=0.42, pad=0.3];
+  node  [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=12, penwidth=1.2];
+  edge  [color="#57606a", arrowsize=0.7, fontname="Noto Sans CJK SC", fontsize=10];
+
+  client [label="客户端\n(TUI / 微信 / 桌面)", fillcolor="#ddf4ff", color="#54aeff"];
+  gw     [label="主网关（自建 · 账号池轮转）\n带桌面/CLI 指纹出站", fillcolor="#dafbe1", color="#2da44e"];
+
+  subgraph cluster_fb {
+    label="备用链（按延迟 / 稳定性 / 代理依赖排序）";
+    fontname="Noto Sans CJK SC"; fontsize=11; color="#c9d1d9"; style="rounded,dashed";
+    f1 [label="备用 1 · 同区域免费额度\n低延迟，无需代理", fillcolor="#f6f8fa"];
+    f2 [label="备用 2 · 另一家国内免费额度\n同源风险隔离", fillcolor="#f6f8fa"];
+    f3 [label="备用 3 · 海外免费额度\n需代理，链路长", fillcolor="#fff8c5", color="#d4a72c"];
+    f4 [label="备用 4 · 聚合平台 free 型号\n垫底，限速明显", fillcolor="#fff8c5", color="#d4a72c"];
+  }
+
+  ok  [label="正常返回", fillcolor="#dafbe1", color="#2da44e"];
+  err [label="该档失败 / 429 / 鉴权异常\n→ 降级到下一档", shape=note, fillcolor="#ffebe9", color="#cf222e"];
+
+  client -> gw;
+  gw -> ok [label="  成功"];
+  gw -> f1  [label="  失败", color="#cf222e", fontcolor="#cf222e"];
+  f1  -> f2  [label="  失败", color="#cf222e", fontcolor="#cf222e"];
+  f2  -> f3  [label="  失败", color="#cf222e", fontcolor="#cf222e"];
+  f3  -> f4  [label="  失败", color="#cf222e", fontcolor="#cf222e"];
+  f4  -> err [label="  全部失败", color="#cf222e", fontcolor="#cf222e"];
+  f1 -> ok [style=dashed, constraint=false, color="#2da44e", label=" 命中"];
+  f2 -> ok [style=dashed, constraint=false, color="#2da44e", label=" 命中"];
+}

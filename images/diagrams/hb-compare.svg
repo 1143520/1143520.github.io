@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="385.2pt" height="183.168pt" viewBox="0 0 385.2 183.168" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-08T15:52:19.617492</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 183.168 
+L 385.2 183.168 
+L 385.2 -0 
+L 0 -0 
+z
+" style="fill: #0d1117"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 2.88 180.288 
+L 382.32 180.288 
+L 382.32 2.88 
+L 2.88 2.88 
+z
+" style="fill: #0d1117"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 75.42 44.064 
+L 217.71 44.064 
+L 217.71 14.9184 
+L 75.42 14.9184 
+z
+" clip-path="url(#p8edcb63c11)" style="fill: #161b22; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 228.87 44.064 
+L 371.16 44.064 
+L 371.16 14.9184 
+L 228.87 14.9184 
+z
+" clip-path="url(#p8edcb63c11)" style="fill: #1c2430; stroke: #3fb950; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 92.16 61.8048 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="me70d667e50" d="M 0 3.5 
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
+C 3.131218 1.81853 3.5 0.928211 3.5 0 
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5 
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874 
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0 
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874 
+C -1.81853 3.131218 -0.928211 3.5 0 3.5 
+z
+" style="stroke: #3fb950"/>
+    </defs>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="92.16" y="61.8048" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="line2d_2">
+    <path d="M 245.61 61.8048 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #f85149; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m29b26caea7" d="M -3.5 3.5 
+L 3.5 -3.5 
+M -3.5 -3.5 
+L 3.5 3.5 
+" style="stroke: #f85149; stroke-width: 1.6"/>
+    </defs>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#m29b26caea7" x="245.61" y="61.8048" style="fill: #f85149; stroke: #f85149; stroke-width: 1.6"/>
+    </g>
+   </g>
+   <g id="line2d_3">
+    <path d="M 92.16 80.8128 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="92.16" y="80.8128" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="line2d_4">
+    <path d="M 245.61 80.8128 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #f85149; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#m29b26caea7" x="245.61" y="80.8128" style="fill: #f85149; stroke: #f85149; stroke-width: 1.6"/>
+    </g>
+   </g>
+   <g id="line2d_5">
+    <path d="M 92.16 99.8208 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="92.16" y="99.8208" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="line2d_6">
+    <path d="M 245.61 99.8208 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="245.61" y="99.8208" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="line2d_7">
+    <path d="M 92.16 118.8288 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #f85149; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#m29b26caea7" x="92.16" y="118.8288" style="fill: #f85149; stroke: #f85149; stroke-width: 1.6"/>
+    </g>
+   </g>
+   <g id="line2d_8">
+    <path d="M 245.61 118.8288 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="245.61" y="118.8288" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="line2d_9">
+    <path d="M 92.16 137.8368 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #f85149; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#m29b26caea7" x="92.16" y="137.8368" style="fill: #f85149; stroke: #f85149; stroke-width: 1.6"/>
+    </g>
+   </g>
+   <g id="line2d_10">
+    <path d="M 245.61 137.8368 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="245.61" y="137.8368" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="line2d_11">
+    <path d="M 92.16 156.8448 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #f85149; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#m29b26caea7" x="92.16" y="156.8448" style="fill: #f85149; stroke: #f85149; stroke-width: 1.6"/>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <path d="M 245.61 156.8448 
+" clip-path="url(#p8edcb63c11)" style="fill: none; stroke: #3fb950; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p8edcb63c11)">
+     <use xlink:href="#me70d667e50" x="245.61" y="156.8448" style="fill: #3fb950; stroke: #3fb950"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c9d1d9" x="146.565" y="31.254481" transform="rotate(-0 146.565 31.254481)">cron</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #c9d1d9" x="300.015" y="32.078309" transform="rotate(-0 300.015 32.078309)">heartbeat</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c9d1d9" x="11.25" y="64.859487" transform="rotate(-0 11.25 64.859487)">固定周期任务</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c9d1d9" x="11.25" y="83.867487" transform="rotate(-0 11.25 83.867487)">长期监控</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c9d1d9" x="11.25" y="102.875487" transform="rotate(-0 11.25 102.875487)">一次性提醒</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c9d1d9" x="11.25" y="121.883487" transform="rotate(-0 11.25 121.883487)">需要上下文</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c9d1d9" x="11.25" y="140.891487" transform="rotate(-0 11.25 140.891487)">条件触发</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.5px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c9d1d9" x="11.25" y="159.899487" transform="rotate(-0 11.25 159.899487)">静默后检查</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8edcb63c11">
+   <rect x="2.88" y="2.88" width="379.44" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>
