@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="385.2pt" height="166.536pt" viewBox="0 0 385.2 166.536" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-08T15:52:19.344330</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 166.536 
+L 385.2 166.536 
+L 385.2 0 
+L 0 0 
+z
+" style="fill: #0d1117"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 2.88 163.656 
+L 382.32 163.656 
+L 382.32 2.88 
+L 2.88 2.88 
+z
+" style="fill: #0d1117"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 89.37 48.09825 
+" clip-path="url(#p60670cb44b)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 89.37 48.09825 
+Q 94.95 48.09825 99.523769 48.09825 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 96.323769 46.49825 
+L 99.523769 48.09825 
+L 96.323769 49.69825 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 175.86 48.09825 
+" clip-path="url(#p60670cb44b)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 175.86 48.09825 
+Q 181.44 48.09825 186.013769 48.09825 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 182.813769 46.49825 
+L 186.013769 48.09825 
+L 182.813769 49.69825 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 262.35 48.09825 
+" clip-path="url(#p60670cb44b)" style="fill: none; stroke: #8b949e; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 262.35 48.09825 
+Q 267.93 48.09825 272.503769 48.09825 
+" style="fill: none; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 269.303769 46.49825 
+L 272.503769 48.09825 
+L 269.303769 49.69825 
+z
+" style="fill: #8b949e; stroke: #8b949e; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 223.29 79.9185 
+" clip-path="url(#p60670cb44b)" style="fill: none; stroke-dasharray: 0.9,1.485; stroke-dashoffset: 0; stroke: #f85149; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 223.29 79.9185 
+Q 223.29 94.99125 223.29 109.057769 
+" style="fill: none; stroke: #f85149; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 224.89 105.857769 
+L 223.29 109.057769 
+L 221.69 105.857769 
+z
+" style="fill: #f85149; stroke: #f85149; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 312.57 79.9185 
+" clip-path="url(#p60670cb44b)" style="fill: none; stroke-dasharray: 0.9,1.485; stroke-dashoffset: 0; stroke: #f85149; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 312.57 79.9185 
+Q 312.57 94.99125 312.57 109.057769 
+" style="fill: none; stroke: #f85149; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 314.17 105.857769 
+L 312.57 109.057769 
+L 310.97 105.857769 
+z
+" style="fill: #f85149; stroke: #f85149; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_8">
+    <path d="M 14.04 79.9185 
+L 89.37 79.9185 
+L 89.37 16.278 
+L 14.04 16.278 
+z
+" clip-path="url(#p60670cb44b)" style="fill: #161b22; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 100.53 79.9185 
+L 175.86 79.9185 
+L 175.86 16.278 
+L 100.53 16.278 
+z
+" clip-path="url(#p60670cb44b)" style="fill: #161b22; stroke: #58a6ff; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 187.02 79.9185 
+L 262.35 79.9185 
+L 262.35 16.278 
+L 187.02 16.278 
+z
+" clip-path="url(#p60670cb44b)" style="fill: #1c2430; stroke: #3fb950; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 273.51 79.9185 
+L 348.84 79.9185 
+L 348.84 16.278 
+L 273.51 16.278 
+z
+" clip-path="url(#p60670cb44b)" style="fill: #1c2430; stroke: #3fb950; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(44.305 45.860906)">武装</text>
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(33.205 55.162938)">/pulse add</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(130.795 45.933172)">调度</text>
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(117.845 54.9895)">poller tick</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(217.285 45.933172)">注入</text>
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(209.885 55.509813)">同一对话</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(303.775 45.962078)">汇报</text>
+    <text style="font-size: 7.4px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #c9d1d9" transform="translate(281.575 55.480906)">写正文 + respond</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_12">
+     <path d="M 185.89 142.883375 
+L 260.69 142.883375 
+Q 261.778 142.883375 261.778 141.795375 
+L 261.778 118.526625 
+Q 261.778 117.438625 260.69 117.438625 
+L 185.89 117.438625 
+Q 184.802 117.438625 184.802 118.526625 
+L 184.802 141.795375 
+Q 184.802 142.883375 185.89 142.883375 
+z
+" style="fill: #0d1117"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #8b949e" transform="translate(209.69 124.8485)">失效点 1</text>
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #8b949e" transform="translate(185.89 132.60475)">respond 后还有工具调用</text>
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #8b949e" transform="translate(204.59 140.361)">→ 正文为空</text>
+   </g>
+   <g id="text_6">
+    <g id="patch_13">
+     <path d="M 290.47 142.883375 
+L 334.67 142.883375 
+Q 335.758 142.883375 335.758 141.795375 
+L 335.758 118.526625 
+Q 335.758 117.438625 334.67 117.438625 
+L 290.47 117.438625 
+Q 289.382 117.438625 289.382 118.526625 
+L 289.382 141.795375 
+Q 289.382 142.883375 290.47 142.883375 
+z
+" style="fill: #0d1117"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #8b949e" transform="translate(298.97 124.8485)">失效点 2</text>
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #8b949e" transform="translate(290.47 132.60475)">输出 [SILENT]</text>
+    <text style="font-size: 6.8px; font-family: 'SimHei', 'Noto Sans CJK SC', 'DejaVu Sans', sans-serif; fill: #8b949e" transform="translate(293.87 140.361)">→ 判定静默</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p60670cb44b">
+   <rect x="2.88" y="2.88" width="379.44" height="160.776"/>
+  </clipPath>
+ </defs>
+</svg>

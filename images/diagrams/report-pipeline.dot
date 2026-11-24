@@ -1,0 +1,33 @@
+digraph report {
+  graph [bgcolor="white", rankdir=TB, nodesep=0.35, ranksep=0.45, fontname="Noto Sans CJK SC"];
+  node  [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=12, penwidth=1.2];
+  edge  [color="#57606a", penwidth=1.3, arrowsize=0.8, fontname="Noto Sans CJK SC", fontsize=10];
+
+  start [label="提纲 + 图清单\n（先确认再动手）", fillcolor="#ddf4ff", color="#54aeff"];
+
+  subgraph cluster_fig {
+    label="出图";
+    fontname="Noto Sans CJK SC"; fontsize=11; color="#d0d7de"; style="rounded,dashed";
+    fig  [label="gen_figs.py\n一图一函数", fillcolor="#f6f8fa", color="#8c959f"];
+    chk1 [label="文字溢出检查\n越界检查\n四边贴边检查", fillcolor="#fff8c5", color="#d4a72c"];
+    svg  [label="PNG 600dpi\n+ SVG 可编辑", fillcolor="#dafbe1", color="#2da44e"];
+    fig -> chk1 -> svg;
+  }
+
+  body  [label="正文\nbuild_report.py", fillcolor="#f6f8fa", color="#8c959f"];
+  pass1 [label="第一遍构建\n抓各章真实页码", fillcolor="#ddf4ff", color="#54aeff"];
+  pass2 [label="第二遍构建\n回填静态目录", fillcolor="#ddf4ff", color="#54aeff"];
+  clean [label="strip_hf.py 删页眉页脚\nfix_fonts.py 清残留字体", fillcolor="#ffebe9", color="#cf222e"];
+  pdf   [label="转 PDF\n页数 / 每页字数 / 孤行页", fillcolor="#fff8c5", color="#d4a72c"];
+  done  [label="交付\ndocx + PDF + 图源文件", fillcolor="#dafbe1", color="#2da44e"];
+
+  start -> fig [label=" 1"];
+  svg   -> body [label=" 2"];
+  body  -> pass1 [label=" 3"];
+  pass1 -> pass2 [label=" 4"];
+  pass2 -> clean [label=" 5"];
+  clean -> pdf  [label=" 6"];
+  pdf   -> done [label=" 7"];
+
+  pdf -> body [style=dashed, color="#cf222e", label=" 有空页就回去补内容"];
+}

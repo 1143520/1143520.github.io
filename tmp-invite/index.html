@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加入名单 · 内部邀请</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Serif+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a1622;
+  --ink-soft:rgba(10,22,34,0.62);
+  --ink-faint:rgba(10,22,34,0.34);
+  --paper:#e9edec;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(ellipse 70% 60% at 50% 40%, #12202f 0%, #0a1622 70%, #071019 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px 20px;
+  font-family:"Noto Serif SC",serif;
+}
+
+.sheet-wrap{
+  position:relative;
+  width:100%;
+  max-width:700px;
+  filter:url(#torn);
+}
+
+.sheet{
+  position:relative;
+  background:var(--paper);
+  padding:168px 84px 150px;
+  color:var(--ink);
+  text-align:center;
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(10,22,34,0.030) 0 0.8px, transparent 0.8px),
+    radial-gradient(circle at 63% 47%, rgba(10,22,34,0.024) 0 0.8px, transparent 0.8px),
+    radial-gradient(circle at 39% 78%, rgba(10,22,34,0.020) 0 0.8px, transparent 0.8px),
+    radial-gradient(circle at 84% 12%, rgba(10,22,34,0.018) 0 0.8px, transparent 0.8px),
+    repeating-linear-gradient(93deg, rgba(10,22,34,0.012) 0 1px, transparent 1px 4px),
+    linear-gradient(163deg, #eef1f0 0%, #e6eae9 46%, #e9edec 72%, #e4e8e7 100%);
+  background-size: 6px 6px, 9px 9px, 13px 13px, 17px 17px, 100% 100%, 100% 100%;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.4) inset,
+    0 44px 90px -34px rgba(0,0,0,0.85),
+    0 0 0 1px rgba(10,22,34,0.05);
+}
+
+.sheet::before{
+  content:"";
+  position:absolute; inset:26px;
+  border:1px solid rgba(10,22,34,0.10);
+  pointer-events:none;
+}
+
+mark{
+  display:inline-block;
+  background:transparent;
+  font-weight:700;
+  font-size:10.5px;
+  letter-spacing:0.46em;
+  text-indent:0.46em;
+  padding:8px 16px 8px 20px;
+  border:1.5px solid rgba(10,22,34,0.55);
+  color:rgba(10,22,34,0.86);
+  margin-bottom:110px;
+  transform:rotate(-0.4deg);
+}
+
+.join{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  font-size:19px;
+  color:var(--ink-soft);
+  margin-bottom:4px;
+  letter-spacing:0.01em;
+}
+
+h1{
+  font-family:"Noto Serif SC",serif;
+  font-weight:900;
+  font-size:clamp(40px,7.4vw,74px);
+  line-height:1.14;
+  letter-spacing:0.06em;
+  text-indent:0.06em;
+  margin-bottom:120px;
+  color:var(--ink);
+  /* 压印：上缘浅、下缘深，模拟凸版压入纸面 */
+  text-shadow:
+     0 1px 0 rgba(255,255,255,0.55),
+     0 -1px 0 rgba(10,22,34,0.18),
+     0.6px 0.5px 0 rgba(10,22,34,0.20),
+    -0.5px 0.3px 0 rgba(10,22,34,0.10);
+}
+
+.lede{
+  font-size:13.5px;
+  line-height:2.1;
+  color:var(--ink-soft);
+  max-width:400px;
+  margin:0 auto 104px;
+  font-weight:300;
+  letter-spacing:0.04em;
+}
+
+form{max-width:400px;margin:0 auto;text-align:left}
+
+.field{margin-bottom:56px;position:relative}
+
+label{
+  display:block;
+  font-size:10px;
+  letter-spacing:0.34em;
+  text-indent:0.34em;
+  color:var(--ink-faint);
+  margin-bottom:14px;
+  font-weight:500;
+}
+
+input{
+  width:100%;
+  background:transparent;
+  border:0;
+  border-bottom:2px solid rgba(10,22,34,0.32);
+  padding:8px 2px 11px;
+  font-family:"Noto Serif SC",serif;
+  font-size:17px;
+  color:var(--ink);
+  outline:none;
+  transition:border-color .3s;
+  border-radius:0;
+}
+input::placeholder{color:rgba(10,22,34,0.20);font-style:italic;font-size:14.5px}
+input:focus{border-bottom-color:rgba(10,22,34,0.9)}
+
+button{
+  display:block;
+  margin:96px auto 0;
+  background:transparent;
+  border:1.5px solid var(--ink);
+  color:var(--ink);
+  font-family:"Noto Serif SC",serif;
+  font-weight:500;
+  font-size:11.5px;
+  letter-spacing:0.4em;
+  text-indent:0.4em;
+  padding:17px 46px;
+  cursor:pointer;
+  transition:background .3s, color .3s;
+  transform:rotate(-0.3deg);
+  border-radius:0;
+}
+button:hover{background:var(--ink);color:var(--paper)}
+
+.fine{
+  margin-top:76px;
+  font-size:10px;
+  letter-spacing:0.2em;
+  color:rgba(10,22,34,0.30);
+  font-style:italic;
+}
+
+.done{display:none;padding:60px 0}
+.done .mark{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:26px;
+  margin-bottom:26px;
+  color:var(--ink);
+  transform:rotate(-0.5deg);
+}
+.done p{font-size:14.5px;line-height:2.2;color:var(--ink-soft)}
+
+@media(max-width:640px){
+  .sheet{padding:104px 38px 92px}
+  h1{font-size:clamp(32px,9vw,46px);letter-spacing:0.04em;margin-bottom:76px}
+  .join{font-size:16px}
+  mark{margin-bottom:64px;font-size:9.5px}
+  .lede{margin-bottom:68px;font-size:13px;line-height:2}
+  .field{margin-bottom:42px}
+  button{margin-top:68px;padding:15px 38px}
+  .sheet::before{inset:18px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="torn">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.016" numOctaves="4" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div class="sheet-wrap">
+<main class="sheet">
+
+  <mark>内部邀请</mark>
+
+  <div id="form-wrap">
+    <p class="join">Join the</p>
+    <h1>测试名单</h1>
+    <p class="lede">留下姓名与邮箱，我们会把测试入口发送到这个地址。名额有限，按提交顺序放行。</p>
+
+    <form id="f" novalidate>
+      <div class="field">
+        <label for="name">姓 名</label>
+        <input id="name" name="name" type="text" placeholder="你的名字" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">邮 箱</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="org">单位 / 部门</label>
+        <input id="org" name="org" type="text" placeholder="选填" autocomplete="organization">
+      </div>
+
+      <button type="submit">提 交</button>
+    </form>
+
+    <p class="fine">本页仅作品式测试 · 信息不会外发</p>
+  </div>
+
+  <div class="done" id="done">
+    <div class="mark">Received.</div>
+    <p>已经收到，谢谢你。<br>入口开放时会发到你的邮箱。</p>
+  </div>
+
+</main>
+</div>
+
+<script>
+document.getElementById('f').addEventListener('submit', function(e){
+  e.preventDefault();
+  const n = document.getElementById('name').value.trim();
+  const m = document.getElementById('email').value.trim();
+  if (!n || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)) { alert('请把姓名和邮箱都填好'); return; }
+  document.getElementById('form-wrap').style.display = 'none';
+  document.getElementById('done').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
